@@ -72,8 +72,24 @@
 
                 .flex_class {
                     display: flex;
-                    align-items: center;
-                    gap: 5px;
+                    align-items: start !important;
+                    gap: 0px !important;
+
+
+
+                    .quantity_numbers {
+                        display: block;
+                        width: 13px !important;
+                        height: 13px !important;
+                        background-color: rgb(122 0 255);
+                        color: white;
+                        font-size: 10px !important;
+                        display: flex !important;
+                        align-items: center !important;
+                        justify-content: center !important;
+                        display: block;
+                        border-radius: 100%;
+                    }
 
                     h2 {
                         font-size: 20px;
@@ -170,11 +186,29 @@
                     align-items: center;
                     gap: 5px;
 
+
+
+                    .quantity_numbers {
+                        display: block;
+                        width: 15px;
+                        height: 17px;
+                        background-color: rgb(122 0 255);
+                        color: white;
+                        font-size: 12px;
+                        display: flex !important;
+                        align-items: center !important;
+                        justify-content: center !important;
+                        display: block;
+                        border-radius: 100%;
+                    }
+
                     p {
                         display: none;
                         font-size: 20px;
                     }
                 }
+
+
 
             }
         }
@@ -265,15 +299,180 @@
                     align-items: center;
                     gap: 5px;
 
+
                     p {
                         display: none;
                         font-size: 20px;
                     }
+
                 }
 
             }
         }
 
 
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .body_2 {
+        display: none;
+    }
+
+    .body_3 {
+        max-width: 1500px;
+        margin: 0 auto;
+        background-color: azure;
+        padding: 30px 20px;
+        display: block;
+
+    }
+
+
+    .conteners {
+
+
+        .header_flex_cont {
+
+
+            .burger_favorite_icon_flex_cont {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .burger_and_uzum_icon_cont {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    .uzum_img {
+                        background-image: url(/public/uzum_img.svg);
+                        background-repeat: no-repeat;
+                        width: 220px;
+                        height: 35px;
+
+                    }
+                }
+
+                .enter_favorite_bascet_flex_cont {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+
+                    .flex_class {
+                        display: flex;
+                    }
+
+                    .quantity_number {
+                        width: 13px;
+                        height: 13px;
+                        background-color: rgb(122 0 255);
+                        border-radius: 100%;
+                        font-size: 10px;
+                        text-align: center;
+                        color: white;
+                        display: block;
+                    }
+                }
+
+            }
+        }
+
+        .inp_search {
+            padding: 0 10px;
+            width: 100%;
+            height: 35px;
+            padding: 10px 35px;
+            border: 1px solid #E2EAF1;
+            border-radius: 4px;
+            background-image: url(/public/search_gray.png);
+            background-repeat: no-repeat;
+            background-position-y: center;
+            background-position-x: 10px;
+            margin-top: 20px;
+
+
+        }
+    }
+}
+
+@media(max-width: 615px) {
+
+    .conteners {
+
+
+        .header_flex_cont {
+
+
+            .burger_favorite_icon_flex_cont {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .burger_and_uzum_icon_cont {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    .uzum_img {
+                        background-image: url(/public/uzum_adaptive.svg);
+                        background-repeat: no-repeat;
+                        width: 100px;
+                        height: 35px;
+                    }
+                }
+
+                .enter_favorite_bascet_flex_cont {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+
+                    .flex_class {
+                        display: flex;
+                    }
+
+                    .quantity_number {
+                        width: 13px;
+                        height: 13px;
+                        background-color: rgb(122 0 255);
+                        border-radius: 100%;
+                        font-size: 10px;
+                        text-align: center;
+                        color: white;
+                        display: none;
+                    }
+                }
+
+            }
+        }
+
+        .inp_search {
+            padding: 0 10px;
+            width: 100%;
+            height: 35px;
+            padding: 10px 35px;
+            border: 1px solid #E2EAF1;
+            border-radius: 4px;
+            background-image: url(/public/search_gray.png);
+            background-repeat: no-repeat;
+            background-position-y: center;
+            background-position-x: 10px;
+            margin-top: 20px;
+
+
+        }
     }
 }

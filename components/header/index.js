@@ -47,6 +47,9 @@ function headers_1() {
     search_icons.classList.add('search_icons')
     enter_favorite_bascet_cont.classList.add('enter_favorite_bascet_cont')
 
+    bascet_box_quantity_number.classList.add('quantity_numbers')
+    favorite_box_quantity_number.classList.add('quantity_numbers')
+
     enter_box.classList.add('flex_class')
     favorite_box.classList.add('flex_class')
     bascet_box.classList.add('flex_class')
@@ -67,6 +70,8 @@ function headers_1() {
     favorite_box_p.innerHTML = "Избранное"
     bascet_box_p.innerHTML = "Корзина"
     search_inp.placeholder = "Искать товары"
+    bascet_box_quantity_number.innerHTML = "4"
+    favorite_box_quantity_number.innerHTML = "2"
 
 
 
