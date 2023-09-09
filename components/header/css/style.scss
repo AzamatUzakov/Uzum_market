@@ -10,8 +10,7 @@
 }
 .body_2 {
     margin: 0 auto;
-    padding: 30px 60px;
-    background-color: rgba(102, 51, 153, 0.582);
+    padding: 30px 60px 0;
 
 }
 
@@ -39,7 +38,7 @@
             }
 
             .search_box {
-                width: 550px;
+                width: 450px;
                 display: flex;
                 border-radius: 4px;
                 border: 1px solid #E2EAF1;
@@ -99,4 +98,50 @@
 
     ////////////header_flex_cont_end_zone/////////
 
+}
+///////////////header_end_xone//////////
+
+
+
+.hot_hrefs{
+    margin: 0 auto;
+    padding: 23px 60px  30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+
+    .halal_sale{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+
+        .zero{
+            width: 26px;
+        }
+        h2{
+            font-size: 15px;
+            font-weight: 600;
+        }
+    }
+
+    a{
+        text-decoration: none;
+        color: #8F9195;
+        font-weight: 600;
+    }
+    .more{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        
+
+        .arrow{
+            display: flex;
+            margin-top:5px ;
+        }
+    }
 }

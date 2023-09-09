@@ -3,9 +3,9 @@ let body_2 = document.querySelector('.body_2')
 let body_3 = document.querySelector('.body_3')
 
 
- 
- 
-   
+
+
+
 // Вызовите функцию checkWidth при загрузке страницы или при изменении размера окна браузера
 
 function headers_1() {
@@ -86,8 +86,8 @@ function headers_1() {
     enter_box.append(enter_box_img, enter_box_p)
     favorite_box.append(favorite_box_img, favorite_box_p, favorite_box_quantity_number)
     bascet_box.append(bascet_box_img, bascet_box_p, bascet_box_quantity_number)
-   
-   
+
+
 }
 headers_1()
 
@@ -107,7 +107,7 @@ function headers_2() {
     let header_flex_cont = document.createElement('div')
     let burger_favorite_icon_flex_cont = document.createElement('div')
     let burger_and_uzum_icon_cont = document.createElement('div')
-    let burger_and_uzum_icon_cont_img = document.createElement('div')
+    let burger_and_uzum_icon_cont_img = document.createElement('img')
     let uzum_img = document.createElement('div')
 
     let enter_favorite_bascet_flex_cont = document.createElement('div')
@@ -137,8 +137,8 @@ function headers_2() {
     bascet_box_quantity_number.classList.add('quantity_number')
     input.classList.add('inp_search')
 
-    burger_and_uzum_icon_cont_img.style.backgroundImage = '/public/uzum_img.svg'
-    /* input.style.backgroundImage='/public/search_gray.png */
+    burger_and_uzum_icon_cont_img.src = "/public/burger_menu.svg"
+    input.style.backgroundImage = '/public/search_gray.png'
 
     input.placeholder = 'Искать товары'
     enter_box_img.src = "/public/user.svg"
