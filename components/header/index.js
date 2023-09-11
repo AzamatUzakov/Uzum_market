@@ -1,6 +1,7 @@
 
 let body_2 = document.querySelector('.body_2')
 let body_3 = document.querySelector('.body_3')
+let body_4 = document.querySelector('.hot_hrefs')
 
 
 
@@ -164,3 +165,62 @@ function headers_2() {
 }
 
 headers_2()
+
+
+
+function hot_hrefs() {
+
+    let halal_sale = document.createElement('div')
+    let halal_sale_img = document.createElement('img')
+    let halal_sale_img_h2 = document.createElement('h2')
+    let electrician = document.createElement('a')
+    let appliances = document.createElement('a')
+    let cloth = document.createElement('a')
+    let shoes = document.createElement('a')
+    let accessories = document.createElement('a')
+    let beauty = document.createElement('a')
+    let health = document.createElement('a')
+    let household_products = document.createElement('a')
+    let more_box = document.createElement('div')
+    let more_a = document.createElement('a')
+    let more_img = document.createElement('img')
+
+    halal_sale.classList.add('halal_sale')
+    halal_sale_img.classList.add('zero')
+    halal_sale_img_h2.classList.add('h2')
+    electrician.classList.add('hovered')
+    appliances.classList.add('hovered')
+    cloth.classList.add('hovered')
+    shoes.classList.add('hovered')
+    accessories.classList.add('hovered')
+    beauty.classList.add('hovered')
+    health.classList.add('hovered')
+    household_products.classList.add('hovered')
+    more_box.classList.add('more')
+    more_a.classList.add('more_a')
+    more_img.classList.add('arrow')
+
+    household_products.setAttribute()
+
+
+    halal_sale_img_h2.innerHTML = 'Халяльная расрочка'
+    electrician.innerHTML = "Электрика"
+    appliances.innerHTML = "Бытовая техника"
+    cloth.innerHTML = "Одежда"
+    shoes.innerHTML = "Обувь"
+    accessories.innerHTML = "Аксеасуары"
+    beauty.innerHTML = "Красота"
+    health.innerHTML = "Здоровье"
+    household_products.innerHTML = "Товары для дома"
+    more_a.innerHTML ="Ещё"
+
+
+    halal_sale_img.src = "/public/halal.png"
+    more_img.src = "/public/arrow to down.png"
+
+    body_4.append(halal_sale,electrician,appliances,cloth,shoes,accessories,beauty,health,household_products,more_box)
+    halal_sale.append(halal_sale_img,halal_sale_img_h2)
+    more_box.append(more_a,more_img)
+    
+}
+hot_hrefs()
