@@ -200,7 +200,8 @@ function hot_hrefs() {
     more_a.classList.add('more_a')
     more_img.classList.add('arrow')
 
-    household_products.setAttribute()
+    household_products.setAttribute('id', 'none')
+    health.setAttribute('id', 'none_12')
 
 
     halal_sale_img_h2.innerHTML = 'Халяльная расрочка'
@@ -212,15 +213,15 @@ function hot_hrefs() {
     beauty.innerHTML = "Красота"
     health.innerHTML = "Здоровье"
     household_products.innerHTML = "Товары для дома"
-    more_a.innerHTML ="Ещё"
+    more_a.innerHTML = "Ещё"
 
 
     halal_sale_img.src = "/public/halal.png"
     more_img.src = "/public/arrow to down.png"
 
-    body_4.append(halal_sale,electrician,appliances,cloth,shoes,accessories,beauty,health,household_products,more_box)
-    halal_sale.append(halal_sale_img,halal_sale_img_h2)
-    more_box.append(more_a,more_img)
-    
+    body_4.append(halal_sale, electrician, appliances, cloth, shoes, accessories, beauty, health, household_products, more_box)
+    halal_sale.append(halal_sale_img, halal_sale_img_h2)
+    more_box.append(more_a, more_img)
+
 }
 hot_hrefs()

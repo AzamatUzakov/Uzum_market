@@ -11,7 +11,6 @@
 
 .body_2 {
     margin: 0 auto;
-    padding: 30px 60px 0;
 
 }
 
@@ -21,9 +20,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        img {
-            margin-right: 10px;
-        }
+    gap: 10px;
 
         .cotalog_inp_flex_box {
             display: flex;
@@ -153,16 +150,15 @@
 
 .hot_hrefs {
     margin: 0 auto;
-    padding: 23px 60px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 23px 0  0;
 
 
 
     .halal_sale {
         display: flex;
-        align-items: center;
         gap: 10px;
 
 
