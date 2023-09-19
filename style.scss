@@ -38,10 +38,11 @@
 }
 
 .swiper-button-next {
+    display: none;
+
     background-color: #d3d2cfe7;
     width: 100%;
     height: 100%;
-    display: flex;
     align-items: center;
     border-radius: 100%;
     justify-content: center;
@@ -74,20 +75,23 @@
 
     .goods_flex_box {
         display: flex;
-        width: 230px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+        row-gap: 40px;
 
         .goods_main_box {
-            width: 100%;
+            width: 230px;
             height: 100%;
             border-radius: 12px;
 
             .poster_box {
-                width: 230px;
-                height: 300px;
+                width: 100%;
+                height: 100%;
                 //  background-color: #efefef;
-                padding: 20px;
                 border-radius: 10px;
                 border: 1px solid black;
+                padding: 20px 20px 50px;
 
                 .heart_position {
                     display: flex;
@@ -98,16 +102,23 @@
                 .poster_img_box {
                     margin-top: 10px;
 
+
                     .poster_img {
                         width: 100%;
                         height: 100%;
+                        cursor: pointer;
+                        transition: transform 0.4s ease; /* Добавляем плавный переход анимации */
+                    &:hover{
+                        transform: scale(1.1); /* Увеличиваем размер изображения при наведении мыши */
+
+                    }
                     }
                 }
             }
 
 
             .title {
-                width: 230px;
+                width: 100%;
                 color: #000;
                 font-size: 14px;
                 font-style: normal;
@@ -159,6 +170,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                width: 100%;
 
                 .shop_box {
                     width: 25px;
@@ -169,9 +181,36 @@
                     align-items: center;
                     justify-content: center;
                     padding-right: 2px;
+                    cursor: pointer;
+
+                    &:hover {
+                        transition: .5s ease;
+                        background-color: rgb(241, 241, 241);
+                    }
 
                 }
             }
+        }
+    }
+
+
+    .add_btn{
+        margin: 0 auto;
+        width: 50%;
+        height: 55px;
+        border-radius: 6px;
+        background-color: #f1f1f2;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        font-size: 18px;
+        margin-top: 33px;
+        cursor: pointer;
+        &:hover{
+            transition: .4s ease;
+            background-color:#e0e0e0 ;
         }
     }
 }

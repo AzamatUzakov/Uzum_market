@@ -4,6 +4,7 @@ import { getData } from './modules/http';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css';
+import { goods_products } from './components/goods';
 
 new Swiper('.mySwiper', {
     modules: [Navigation, Pagination],
@@ -15,7 +16,8 @@ new Swiper('.mySwiper', {
 
 
 getData('/goods')
-    .then(res => console.log(res.data))
+    .then(res => goods_products(res.data))
 
 
 
+    
