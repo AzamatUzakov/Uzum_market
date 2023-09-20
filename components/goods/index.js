@@ -1,10 +1,47 @@
 
+let goods_conteners = document.querySelector('.goods_conteners')
+let goods_flex_box = document.querySelector('.goods_flex_box')
+let more = document.querySelector('.add_btn')
+let limit = 7
+
+
+
+
+let check_arr_length = getBtnText()
+function getBtnText() {
+    return goods_flex_box.length - limit > 12 ? "Показать ещё 12" : `Показать ещё ${goods_flex_box.length - 7}`
+
+}
+
+
+
+
+more.onclick = () => {
+
+    if (more.innerText === "Скрыть") {
+        goods_products(goods_flex_box.slice(0, limit))
+        more.innerHTML = getBtnText()
+        return
+    }
+
+    if ((goods_flex_box.length - limit) > 20) {
+        goods_products(goods_flex_box.slice(0, limit + 20))
+        more.innerHTML = getBtnText()
+
+    } else {
+        goods_products(goods_flex_box)
+        more.innerHTML = "Скрыть"
+
+    }
+}
+
+
+
 
 export function goods_products(arr) {
-    let goods_flex_box = document.querySelector('.goods_flex_box')
+ 
     console.log(arr);
-
-    for (let item of arr) {
+    for (let item of arr.slice(0, limit)) {
         let goods_main_box = document.createElement('div')
 
         let poster_box = document.createElement('div')
@@ -49,7 +86,7 @@ export function goods_products(arr) {
         promotion.innerHTML = "32000 сум"
         price_flex_cont_p.innerHTML = price_replace + " 00"
         credit.innerHTML = loan_per_month + " 00 сум/мес"
-
+        more.innerHTML = getBtnText()
 
 
         console.log(loan_per_month);
@@ -68,10 +105,10 @@ export function goods_products(arr) {
         price_flex_cont.append(price_flex_cont_p, shop_box)
         shop_box.append(shop_box_img)
 
-            
 
 
 
-        
+
     }
-} 
+}
+

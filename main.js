@@ -17,6 +17,7 @@ new Swiper('.mySwiper', {
 
 getData('/goods')
     .then(res => goods_products(res.data))
+    
 
 
 
