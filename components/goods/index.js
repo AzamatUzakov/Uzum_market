@@ -1,47 +1,25 @@
 
-let goods_conteners = document.querySelector('.goods_conteners')
-let goods_flex_box = document.querySelector('.goods_flex_box')
+let furniture = document.querySelector('.furniture_contener')
+let PC = document.querySelector('.pc_contener')
+let audio = document.querySelector('.audio_contener')
+let TV = document.querySelector('.TV_contener')
+let kitchen = document.querySelector('.kitchen_contener')
+
+
+
+let goods_flex_box = document.createElement('div')
 let more = document.querySelector('.add_btn')
-let limit = 7
+let limit = 10
 
-
-
-
-let check_arr_length = getBtnText()
-function getBtnText() {
-    return goods_flex_box.length - limit > 12 ? "Показать ещё 12" : `Показать ещё ${goods_flex_box.length - 7}`
-
-}
-
-
-
-
-more.onclick = () => {
-
-    if (more.innerText === "Скрыть") {
-        goods_products(goods_flex_box.slice(0, limit))
-        more.innerHTML = getBtnText()
-        return
-    }
-
-    if ((goods_flex_box.length - limit) > 20) {
-        goods_products(goods_flex_box.slice(0, limit + 20))
-        more.innerHTML = getBtnText()
-
-    } else {
-        goods_products(goods_flex_box)
-        more.innerHTML = "Скрыть"
-
-    }
-}
 
 
 
 
 export function goods_products(arr) {
- 
+
     console.log(arr);
-    for (let item of arr.slice(0, limit)) {
+    for (let item of arr) {
+
         let goods_main_box = document.createElement('div')
 
         let poster_box = document.createElement('div')
@@ -61,6 +39,7 @@ export function goods_products(arr) {
         let shop_box = document.createElement('div')
         let shop_box_img = document.createElement('img')
 
+        goods_flex_box.classList.add('goods_flex_box')
         goods_main_box.classList.add("goods_main_box")
         poster_box.classList.add("poster_box")
         heart_position.classList.add("heart_position")
@@ -79,20 +58,26 @@ export function goods_products(arr) {
 
         let loan_per_month = Math.round(item.price / month)/* .toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ')
         loan_per_month */
-        title_p.innerHTML = item.title
+        title_p.innerHTML = item.title.slice(0,70)
         grade.innerHTML = '⭐️'
         grade_p.innerHTML = item.rating
         grade_p_num.innerHTML = `(${item.salePercentage} оценка)`
         promotion.innerHTML = "32000 сум"
         price_flex_cont_p.innerHTML = price_replace + " 00"
         credit.innerHTML = loan_per_month + " 00 сум/мес"
-        more.innerHTML = getBtnText()
+        more.innerHTML = "20"
 
 
         console.log(loan_per_month);
         heart_position_img.src = "/public/love.png"
         shop_box_img.src = "/public/shopping-cart 1.png"
         poster_img_box_img.src = item.media[0]
+
+ 
+
+        if (item.type === 'furniture') {
+            furniture.append(goods_flex_box)
+        } 
 
 
         goods_flex_box.append(goods_main_box)

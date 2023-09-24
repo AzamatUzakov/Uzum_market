@@ -17,7 +17,13 @@
 /////////max-width 1200px///////
 
 
+@media(max-width:1100px) {
+    .contener{
+        padding: 30px 20px;
 
+  
+  }
+  }
 
 @media(max-width:930px) {
     .contener {
@@ -65,7 +71,7 @@
     }
 
 
-    .goods_conteners {
+    .furniture, .PC, .audio, .TV, .kitchen  {
         width: 100%;
 
         h1 {
@@ -198,7 +204,7 @@
 
     }
     
-    .goods_conteners {
+    .furniture, .PC, .audio, .TV, .kitchen  {
         width: 100%;
 
         h1 {
@@ -332,7 +338,7 @@
 
     }
     
-    .goods_conteners {
+    .furniture , .PC, .audio, .TV, .kitchen  {
         width: 100%;
 
         h1 {
@@ -347,7 +353,6 @@
         .goods_flex_box {
             display: flex;
             justify-content: space-between;
-            flex-wrap: wrap;
             gap: 10px;
             row-gap: 40px;
 
@@ -389,7 +394,8 @@
                     font-weight: 500;
                     line-height: normal;
                     margin-top: 7px;
-
+                    height: 100%;
+                  
                 }
 
                 .grade {
@@ -468,7 +474,7 @@
 
     }
     
-    .goods_conteners {
+    .furniture , .PC, .audio, .TV, .kitchen {
         width: 100%;
 
         h1 {
