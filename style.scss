@@ -67,7 +67,7 @@
 .TV,
 .kitchen {
     width: 100%;
-
+margin-top: 50px;
     .s {
         width: 100%;
     }
@@ -218,6 +218,7 @@
         font-weight: 500;
         font-size: 18px;
         margin-top: 33px;
+        border: 0;
         cursor: pointer;
 
         &:hover {

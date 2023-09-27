@@ -20,8 +20,9 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-    gap: 10px;
-cursor: pointer;
+        gap: 10px;
+        cursor: pointer;
+
         .cotalog_inp_flex_box {
             display: flex;
             align-items: center;
@@ -154,7 +155,7 @@ cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 23px 0  0;
+    padding: 23px 0 0;
 
 
 
@@ -184,7 +185,7 @@ cursor: pointer;
         cursor: pointer;
         transition: .4s ease;
 
-        &:hover{
+        &:hover {
             color: black;
         }
     }
@@ -211,15 +212,17 @@ cursor: pointer;
 }
 
 .more {
-    a{
+    a {
         text-decoration: none;
         color: #8F9195;
         font-weight: 500;
-        font-size: 14px; 
-        &:hover{
+        font-size: 14px;
+
+        &:hover {
             color: black;
         }
     }
+
     display: flex;
     align-items: center;
     justify-content: center;

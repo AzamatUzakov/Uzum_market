@@ -1,23 +1,60 @@
 
-let furniture = document.querySelector('.furniture_contener')
-let PC = document.querySelector('.pc_contener')
-let audio = document.querySelector('.audio_contener')
-let TV = document.querySelector('.TV_contener')
-let kitchen = document.querySelector('.kitchen_contener')
+let createBlock_contener = document.querySelector('.createBlock_contener')
 
 
 
 let goods_flex_box = document.createElement('div')
-let more = document.querySelector('.add_btn')
-let limit = 10
 
 
 
+export function createBlock(arr, place, titles) {
+    let limit = 5
+      let chekArrLength = arr.length - limit > 5 ? "Покозать ещё 5" : `Покозать ещё ${arr.length - limit}`
+
+   
+    let main_contener = document.createElement('div')
+    let title = document.createElement('h1')
+    let box = document.createElement('div')
+    let show_more = document.createElement('button')
+
+    main_contener.classList.add('furniture')
+    title.classList.add('h1')
+    box.classList.add('s')
+    show_more.classList.add('add_btn')
+
+    title.innerHTML = titles
+    show_more.innerHTML = chekArrLength
+    goods_products(arr.slice(0, limit), box)
 
 
-export function goods_products(arr) {
+    place.append(main_contener)
+    main_contener.append(title, box, show_more)
 
-    console.log(arr);
+
+    show_more.onclick = () => {
+        if (show_more.innerText === "скрыть") {
+            limit = 5
+            goods_products(arr.slice(0, limit), box)
+            show_more.innerHTML = arr.length - limit > 5 ? "Покозать ещё 5" : `Покозать ещё ${arr.length - limit}`
+            return
+
+        }
+
+        if ((arr.length - limit) > 5) {
+            goods_products(arr.slice(0, limit + 5), box)
+            show_more.innerHTML = arr.length - limit > 5 ? "Покозать ещё 5" : `Покозать ещё ${arr.length - limit}`
+
+
+        } else {
+            goods_products(arr, box)
+            show_more.innerHTML = "скрыть"
+        }
+
+    }
+}
+
+export function goods_products(arr, box) {
+    box.innerHTML = ""
     for (let item of arr) {
 
         let goods_main_box = document.createElement('div')
@@ -39,7 +76,7 @@ export function goods_products(arr) {
         let shop_box = document.createElement('div')
         let shop_box_img = document.createElement('img')
 
-        goods_flex_box.classList.add('goods_flex_box')
+        box.classList.add('goods_flex_box')
         goods_main_box.classList.add("goods_main_box")
         poster_box.classList.add("poster_box")
         heart_position.classList.add("heart_position")
@@ -58,29 +95,26 @@ export function goods_products(arr) {
 
         let loan_per_month = Math.round(item.price / month)/* .toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ')
         loan_per_month */
-        title_p.innerHTML = item.title.slice(0,70)
+        title_p.innerHTML = item.title.slice(0, 70)
         grade.innerHTML = '⭐️'
         grade_p.innerHTML = item.rating
         grade_p_num.innerHTML = `(${item.salePercentage} оценка)`
         promotion.innerHTML = "32000 сум"
         price_flex_cont_p.innerHTML = price_replace + " 00"
         credit.innerHTML = loan_per_month + " 00 сум/мес"
-        more.innerHTML = "20"
 
 
-        console.log(loan_per_month);
         heart_position_img.src = "/public/love.png"
         shop_box_img.src = "/public/shopping-cart 1.png"
         poster_img_box_img.src = item.media[0]
 
- 
-
-        if (item.type === 'furniture') {
-            furniture.append(goods_flex_box)
-        } 
 
 
-        goods_flex_box.append(goods_main_box)
+
+
+
+
+        box.append(goods_main_box)
         goods_main_box.append(poster_box, title, grade, credit, promotion, price_flex_cont)
         poster_box.append(heart_position, poster_img_box)
         heart_position.append(heart_position_img)
@@ -89,8 +123,6 @@ export function goods_products(arr) {
         grade.append(grade_p, grade_p_num)
         price_flex_cont.append(price_flex_cont_p, shop_box)
         shop_box.append(shop_box_img)
-
-
 
 
 
