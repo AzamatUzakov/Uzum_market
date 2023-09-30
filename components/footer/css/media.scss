@@ -1,0 +1,207 @@
+@media(max-width:1300px) {}
+
+/////////////max_width 1300px////////
+
+
+
+
+@media(max-width:1200px) {
+
+    footer {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 20%;
+
+
+
+        h1 {
+            color: #1f1f26;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 18px;
+            margin-bottom: 16px;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: #4d4e59;
+            ;
+            display: block;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 16px;
+        }
+
+        .application_box {
+            display: flex;
+            column-gap: 140px;
+
+            P {
+                display: inline-block;
+                width: 80px;
+            }
+
+            .apllication_flex_box {
+                display: flex;
+                align-items: center;
+                align-items: center;
+                gap: 20px;
+                cursor: pointer;
+            }
+
+            .w {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+                p {
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+            }
+
+            .uzum_networks_cont {
+                margin-top: 0px;
+
+                .networks {
+                    display: flex;
+                    gap: 10px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+
+    .down {
+        width: 100%;
+        margin-top: 30px;
+
+        .down_flex {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+
+        .a {
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .down_title {
+            display: flex;
+            font-size: 14px;
+            gap: 20px;
+            font-weight: 500;cursor: pointer;
+
+        }
+
+    }
+
+}
+
+/////////max-width 1200px///////
+
+
+
+
+@media(max-width:930px) {
+    footer {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 20%;
+
+
+
+        h1 {
+            color: #1f1f26;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 18px;
+            margin-bottom: 16px;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: #4d4e59;
+            ;
+            display: block;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 16px;
+        }
+
+        .application_box {
+            display: flex;
+            column-gap: 140px;
+
+            P {
+                display: inline-block;
+                width: 80px;
+            }
+
+            .apllication_flex_box {
+                display: flex;
+                align-items: center;
+                align-items: center;
+                gap: 20px;
+                cursor: pointer;
+            }
+
+            .w {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+                p {
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+            }
+
+            .uzum_networks_cont {
+                margin-top: 0px;
+
+                .networks {
+                    display: flex;
+                    gap: 10px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+
+    .down {
+        width: 100%;
+        margin-top: 30px;
+
+        .down_flex {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+
+        .a {
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .down_title {
+            display: flex;
+            font-size: 14px;
+            gap: 20px;
+            font-weight: 500;cursor: pointer;
+
+        }
+
+    }
+}
+
+@media(max-width: 615px) {}
