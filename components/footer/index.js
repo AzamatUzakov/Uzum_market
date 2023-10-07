@@ -1,8 +1,9 @@
 
 
 
-
+let footer = document.querySelector('footer')
 function one_var() {
+
 
     let one_variant = document.createElement('div')
 
@@ -10,16 +11,19 @@ function one_var() {
     let about_us_contener = document.createElement('div')
     let about_us_contener_h1 = document.createElement('h1')
     let about_us_contener_a_1 = document.createElement('a')
+    let about_us_contener_BR = document.createElement('br')
     let about_us_contener_a_2 = document.createElement('a')
 
     let for_users_contner = document.createElement('div')
     let for_users_contner_h1 = document.createElement('h1')
     let for_users_contner_a_1 = document.createElement('a')
+    let for_users_contner_BR = document.createElement('br')
     let for_users_contner_a_2 = document.createElement('a')
 
     let for_entrepreneurs_contner = document.createElement('div')
     let for_entrepreneurs_contner_h1 = document.createElement('h1')
     let for_entrepreneurs_contner_a_1 = document.createElement('a')
+    let for_entrepreneurs_contner_BR = document.createElement('br')
     let for_entrepreneurs_contner_a_2 = document.createElement('a')
 
 
@@ -92,8 +96,200 @@ function one_var() {
     down_title_p_2.classList.add('p')
 
 
+    about_us_contener_h1.innerHTML = "О нас"
+    about_us_contener_a_1.innerHTML = "Пункт выдачи"
+    about_us_contener_a_2.innerHTML = "Вакансии"
 
-    
+    for_users_contner_h1.innerHTML = "Пользователям"
+    for_users_contner_a_1.innerHTML = "Связаться с нами"
+    for_users_contner_a_2.innerHTML = "Вопрос - ответ"
+
+    for_entrepreneurs_contner_h1.innerHTML = "Для предпринимателей"
+    for_entrepreneurs_contner_a_1.innerHTML = "Продовайте на Uzum"
+    for_entrepreneurs_contner_a_2.innerHTML = "Вход для продовцов"
+
+    flex_width_1200px_h1.innerHTML = "Скачать приложение"
+    apple_item_p.innerHTML = "AppStore"
+    google_play_item_p.innerHTML = "Google Play"
+
+    uzum_networks_cont_h1.innerHTML = "Uzum в соцсетях"
+
+    down_title_p_1.innerHTML = "Соглашение о конфиденциальности"
+    down_title_p_2.innerHTML = "Пользовательское соглашение"
+    addres_a.innerHTML = "«2023© ООО «UZUM MARKET». ИНН 309376127. Все права защищены»"
+
+
+    about_us_contener_a_1.href = "#"
+    about_us_contener_a_2.href = "#"
+    for_users_contner_a_1.href = "#"
+    for_users_contner_a_2.href = "#"
+    for_entrepreneurs_contner_a_1.href = "#"
+    for_entrepreneurs_contner_a_2.href = "#"
+    addres_a.href = "#"
+
+
+    apple_item_img.src = "/public/apple-logo_32.png"
+    google_play_item_img.src = "/public/google-play_32.png"
+    networks_img_INST.src = "/public/instagram.png"
+    networks_img_TG.src = "/public/telegram.png"
+    networks_img_YOU.src = "/public/youtube.png"
+    networks_img_FC.src = "/public/facebook.png"
+
+    footer.append(one_variant)
+    one_variant.append(about_us_contener, for_users_contner, for_entrepreneurs_contner, application_box, down)
+    about_us_contener.append(about_us_contener_h1, about_us_contener_a_1, about_us_contener_BR, about_us_contener_a_2)
+    for_users_contner.append(for_users_contner_h1, for_users_contner_a_1, for_users_contner_BR, for_users_contner_a_2)
+    for_entrepreneurs_contner.append(for_entrepreneurs_contner_h1, for_entrepreneurs_contner_a_1, for_entrepreneurs_contner_BR, for_entrepreneurs_contner_a_2)
+    application_box.append(flex_width_1200px, uzum_networks_cont)
+    flex_width_1200px.append(flex_width_1200px_h1, apllication_flex_box)
+    apllication_flex_box.append(apple_item, google_play_item)
+    apple_item.append(apple_item_img, apple_item_p)
+    google_play_item.append(google_play_item_img, google_play_item_p)
+    uzum_networks_cont.append(uzum_networks_cont_h1, networks)
+    networks.append(networks_img_INST, networks_img_TG, networks_img_YOU, networks_img_FC)
+    down.append(down_hr, down_flex)
+    down_flex.append(down_title, addres)
+    down_title.append(down_title_p_1, down_title_p_2)
+    addres.append(addres_a)
 }
+one_var()
 
 
+
+function two_var() {
+
+    let two_variant = document.createElement('div')
+    let about_us_contener_two_V = document.createElement('div')
+    let about_us_contener_two_V_h1 = document.createElement('h1')
+    let about_us_contener_two_V_img = document.createElement('img')
+    let up_hr = document.createElement('hr')
+
+    let defoult_height = document.createElement('div')
+    let defoult_height_a_1 = document.createElement('a')
+    let defoult_height_BR = document.createElement('br')
+    let defoult_height_a_2 = document.createElement('a')
+
+    let for_users_contner_two_V = document.createElement('div')
+    let for_users_contner_two_V_h1 = document.createElement('h1')
+    let for_users_contner_two_V_img = document.createElement('img')
+    let down_hr = document.createElement('hr')
+
+    let defoult_height_two = document.createElement('div')
+    let defoult_height_two_a_1 = document.createElement('a')
+    let defoult_height_two_BR = document.createElement('br')
+    let defoult_height_two_a_2 = document.createElement('a')
+
+    let for_entrepreneurs_contner_two_V = document.createElement('div')
+    let for_entrepreneurs_contner_two_V_h1 = document.createElement('h1')
+    let for_entrepreneurs_contner_two_V_img = document.createElement('img')
+
+    let defoult_height_three = document.createElement('div')
+    let defoult_height_three_a_1 = document.createElement('a')
+    let defoult_height_three_BR = document.createElement('br')
+    let defoult_height_three_a_2 = document.createElement('a')
+
+    let download_box = document.createElement('div')
+    let download_box_h1 = document.createElement('h1')
+
+    let aplication_flex_box = document.createElement('div')
+    let apple_box = document.createElement('div')
+    let apple_box_img = document.createElement('img')
+
+    let title_case_one = document.createElement('div')
+    let title_case_one_p = document.createElement('p')
+    let title_case_one_h1 = document.createElement('h1')
+
+    let google_box = document.createElement('div')
+    let google_box_img = document.createElement('img')
+
+    let title_case_two = document.createElement('div')
+    let title_case_two_p = document.createElement('p')
+    let title_case_two_h1 = document.createElement('h1')
+
+    let uzum_network_box_two_V = document.createElement('div')
+    let uzum_network_box_two_V_h1 = document.createElement('h1')
+
+    let app = document.createElement('div')
+    let ins_tg_box = document.createElement('div')
+    let ins_tg_box_img_INST = document.createElement('img')
+    let ins_tg_box_img_TG = document.createElement('img')
+
+    let you_fc = document.createElement('div')
+    let you_fc_img_YOU = document.createElement('img')
+    let you_fc_img_FC = document.createElement('img')
+
+    let down_two_V = document.createElement('div')
+    let down_two_V_h1 = document.createElement('h1')
+    let down_two_V_h2 = document.createElement('h2')
+    let down_two_V_p = document.createElement('p')
+
+
+    two_variant.classList.add('two_variant')
+    about_us_contener_two_V.classList.add('T')
+    for_users_contner_two_V.classList.add('T')
+    for_entrepreneurs_contner_two_V.classList.add('T')
+
+    about_us_contener_two_V_h1.classList.add('h1')
+    for_users_contner_two_V_h1.classList.add('h1')
+    for_entrepreneurs_contner_two_V_h1.classList.add('h1')
+    download_box_h1.classList.add('h1')
+    title_case_one_h1.classList.add('h1')
+    title_case_two_h1.classList.add('h1')
+    uzum_network_box_two_V_h1.classList.add('h1')
+    down_two_V_h1.classList.add('h1')
+
+    two_variant.classList.add('two_variant')
+    two_variant.classList.add('two_variant')
+    two_variant.classList.add('two_variant')
+
+    about_us_contener_two_V_img.classList.add('img')
+    for_users_contner_two_V_img.classList.add('img')
+    for_entrepreneurs_contner_two_V_img.classList.add('img')
+
+    defoult_height.classList.add('defoult_height')
+    defoult_height_two.classList.add('defoult_height')
+    defoult_height_three.classList.add('defoult_height')
+
+    defoult_height_a_1.classList.add('a')
+    defoult_height_a_2.classList.add('a')
+    defoult_height_two_a_1.classList.add('a')
+    defoult_height_two_a_2.classList.add('a')
+    defoult_height_three_a_1.classList.add('a')
+    defoult_height_three_a_2.classList.add('a')
+
+    up_hr.classList.add('hr')
+    down_hr.classList.add('hr')
+
+    download_box.classList.add('download_box')
+    aplication_flex_box.classList.add('aplication_flex_box')
+    apple_box.classList.add('apple_box')
+    title_case_one_p.classList.add('p')
+    title_case_two_p.classList.add('p')
+
+    google_box.classList.add('google_box')
+    uzum_network_box_two_V.classList.add('uzum_network_box_two_V')
+    down_two_V.classList.add('down_two_V')
+    down_two_V_h2.classList.add('h2')
+    down_two_V_p.classList.add('p')
+
+
+    about_us_contener_two_V_h1.innerHTML = ""
+    for_users_contner_two_V_h1.innerHTML = ""
+    for_entrepreneurs_contner_two_V_h1.innerHTML = ""
+    download_box_h1.innerHTML = ""
+    title_case_one_h1.innerHTML = ""
+    title_case_two_h1.innerHTML = ""
+    uzum_network_box_two_V_h1.innerHTML = ""
+    down_two_V_h1.innerHTML = ""
+    down_two_V_h2.innerHTML = ""
+    title_case_one_p.innerHTML = ""
+    title_case_two_p.innerHTML = ""
+    down_two_V_p.innerHTML = ""
+    defoult_height_a_1.innerHTML = ""
+    defoult_height_a_2.innerHTML = ""
+    defoult_height_two_a_1.innerHTML = ""
+    defoult_height_two_a_2.innerHTML = ""
+    defoult_height_three_a_1.innerHTML = ""
+    defoult_height_three_a_2.innerHTML = ""
+
+}
