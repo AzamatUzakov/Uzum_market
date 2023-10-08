@@ -273,23 +273,64 @@ function two_var() {
     down_two_V_p.classList.add('p')
 
 
-    about_us_contener_two_V_h1.innerHTML = ""
-    for_users_contner_two_V_h1.innerHTML = ""
-    for_entrepreneurs_contner_two_V_h1.innerHTML = ""
-    download_box_h1.innerHTML = ""
-    title_case_one_h1.innerHTML = ""
-    title_case_two_h1.innerHTML = ""
-    uzum_network_box_two_V_h1.innerHTML = ""
-    down_two_V_h1.innerHTML = ""
-    down_two_V_h2.innerHTML = ""
-    title_case_one_p.innerHTML = ""
-    title_case_two_p.innerHTML = ""
-    down_two_V_p.innerHTML = ""
-    defoult_height_a_1.innerHTML = ""
-    defoult_height_a_2.innerHTML = ""
-    defoult_height_two_a_1.innerHTML = ""
-    defoult_height_two_a_2.innerHTML = ""
-    defoult_height_three_a_1.innerHTML = ""
-    defoult_height_three_a_2.innerHTML = ""
+    about_us_contener_two_V_h1.innerHTML = "О нас"
+    for_users_contner_two_V_h1.innerHTML = "Пользователям"
+    for_entrepreneurs_contner_two_V_h1.innerHTML = "Для предпринимателей"
+    download_box_h1.innerHTML = "Скачать приложение"
+    title_case_one_h1.innerHTML = "AppStore"
+    title_case_two_h1.innerHTML = "Google Play"
+    uzum_network_box_two_V_h1.innerHTML = "Uzum в соцсетях"
+    down_two_V_h1.innerHTML = "Соглашение о конфиденциальности"
+    down_two_V_h2.innerHTML = "Пользовательское соглашение"
+    title_case_one_p.innerHTML = "Загрузите в"
+    title_case_two_p.innerHTML = "Доступно в"
+    down_two_V_p.innerHTML = "«2023© ООО «UZUM MARKET». ИНН 309376127. Все права защищены»"
+    defoult_height_a_1.innerHTML = "Пункт выдачи"
+    defoult_height_a_2.innerHTML = "Вакансии"
+    defoult_height_two_a_1.innerHTML = "Связаться с нами"
+    defoult_height_two_a_2.innerHTML = "Вопрос - ответ"
+    defoult_height_three_a_1.innerHTML = "Продовайте на Uzum"
+    defoult_height_three_a_2.innerHTML = "Вход для продовцов"
+
+
+    defoult_height_a_1.href = "#"
+    defoult_height_a_2.href = "#"
+    defoult_height_two_a_1.href = "#"
+    defoult_height_two_a_2.href = "#"
+    defoult_height_three_a_1.href = "#"
+    defoult_height_three_a_2.href = "#"
+
+
+    about_us_contener_two_V_img.src = "/public/next.png"
+    for_users_contner_two_V_img.src = "/public/next.png"
+    for_entrepreneurs_contner_two_V_img.src = "/public/next.png"
+    apple_box_img.src = "/public/apple-logo_white.png"
+    google_box_img.src = "/public/google-play_32.png"
+    ins_tg_box_img_INST.src = "/public/instagram.png"
+    ins_tg_box_img_TG.src = "/public/telegram.png"
+    you_fc_img_YOU.src = "/public/youtube.png"
+    you_fc_img_FC.src = "/public/facebook.png"
+
+
+    footer.append(two_variant)
+    two_variant.append(about_us_contener_two_V, defoult_height,  for_entrepreneurs_contner_two_V, defoult_height_two, down_hr, for_entrepreneurs_contner_two_V, up_hr, defoult_height_three, download_box, uzum_network_box_two_V, down_two_V)
+    about_us_contener_two_V.append(about_us_contener_two_V_h1, about_us_contener_two_V_img)
+    defoult_height.append(defoult_height_a_1, defoult_height_BR, defoult_height_a_2)
+    for_users_contner_two_V.append(for_users_contner_two_V_h1, for_users_contner_two_V_img)
+    defoult_height_two.append(defoult_height_two_a_1, defoult_height_two_BR, defoult_height_two_a_2)
+    for_entrepreneurs_contner_two_V.append(for_entrepreneurs_contner_two_V_h1, for_entrepreneurs_contner_two_V_img)
+    defoult_height_three.append(defoult_height_three_a_1, defoult_height_three_BR, defoult_height_three_a_2)
+    download_box.append(download_box_h1, aplication_flex_box)
+    aplication_flex_box.append(apple_box, google_box)
+    apple_box.append(apple_box_img, title_case_one)
+    title_case_one.append(title_case_one_p, title_case_one_h1)
+    google_box.append(google_box_img, title_case_two)
+    title_case_two.append(title_case_two_p, title_case_two_h1)
+    uzum_network_box_two_V.append(uzum_network_box_two_V_h1,app)
+    app.append(ins_tg_box, you_fc)
+    ins_tg_box.append(ins_tg_box_img_INST, ins_tg_box_img_TG)
+    you_fc.append(you_fc_img_YOU, you_fc_img_FC)
+    down_two_V.append(down_two_V_h1, down_two_V_h2, down_two_V_p)
 
 }
+two_var()
