@@ -238,6 +238,9 @@ function two_var() {
     uzum_network_box_two_V_h1.classList.add('h1')
     down_two_V_h1.classList.add('h1')
 
+    ins_tg_box.classList.add('ins_tg_box')
+    you_fc.classList.add('you_fc')
+
     two_variant.classList.add('two_variant')
     two_variant.classList.add('two_variant')
     two_variant.classList.add('two_variant')
@@ -313,7 +316,7 @@ function two_var() {
 
 
     footer.append(two_variant)
-    two_variant.append(about_us_contener_two_V, defoult_height,  for_entrepreneurs_contner_two_V, defoult_height_two, down_hr, for_entrepreneurs_contner_two_V, up_hr, defoult_height_three, download_box, uzum_network_box_two_V, down_two_V)
+    two_variant.append(about_us_contener_two_V, defoult_height, for_entrepreneurs_contner_two_V, defoult_height_two, down_hr, for_entrepreneurs_contner_two_V, up_hr, defoult_height_three, download_box, uzum_network_box_two_V, down_two_V)
     about_us_contener_two_V.append(about_us_contener_two_V_h1, about_us_contener_two_V_img)
     defoult_height.append(defoult_height_a_1, defoult_height_BR, defoult_height_a_2)
     for_users_contner_two_V.append(for_users_contner_two_V_h1, for_users_contner_two_V_img)
@@ -326,11 +329,27 @@ function two_var() {
     title_case_one.append(title_case_one_p, title_case_one_h1)
     google_box.append(google_box_img, title_case_two)
     title_case_two.append(title_case_two_p, title_case_two_h1)
-    uzum_network_box_two_V.append(uzum_network_box_two_V_h1,app)
+    uzum_network_box_two_V.append(uzum_network_box_two_V_h1, app)
     app.append(ins_tg_box, you_fc)
     ins_tg_box.append(ins_tg_box_img_INST, ins_tg_box_img_TG)
     you_fc.append(you_fc_img_YOU, you_fc_img_FC)
     down_two_V.append(down_two_V_h1, down_two_V_h2, down_two_V_p)
 
+
+
+
+    about_us_contener_two_V_img.onclick = () => {
+
+        defoult_height_two.style.display = 'block'
+
+        setTimeout(() => {
+            defoult_height_two.style.height= 30+'px'
+
+        }, 9);
+/*         about_us_contener_two_V_img.style.height = 100 +'px'
+ */
+        console.log('click');
+
+    }
 }
 two_var()

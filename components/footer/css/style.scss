@@ -132,6 +132,11 @@
 
     .defoult_height {
         display: none;
+        transition: .5s ease;
+        height: 0;
+        a{
+            transition: .5s ease;
+        }
 
         a {
             text-decoration: none;
@@ -258,6 +263,12 @@
 
 
         }
+    }
+    .ins_tg_box, .you_fc{
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        margin-bottom: 5px;
     }
 
 }
