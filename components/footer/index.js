@@ -91,6 +91,7 @@ function one_var() {
     down.classList.add('down')
     down_flex.classList.add('down_flex')
 
+    down_hr.classList.add('hr')
     down_title.classList.add('down_title')
     down_title_p_1.classList.add('p')
     down_title_p_2.classList.add('p')

@@ -71,6 +71,10 @@
         width: 100%;
         margin-top: 30px;
 
+        hr {
+    border-top: 0;
+    border-color: #e5e5e6;
+        }
         .down_flex {
             display: flex;
             justify-content: space-between;
@@ -99,12 +103,13 @@
 ///////////////one_variant/////////////////
 
 
-.clone_arrow{
+.clone_arrow {
     display: none;
     transition: .5s ease;
-    
+
 
 }
+
 .two_variant {
     margin: 0 auto;
     text-align: center;
@@ -141,7 +146,8 @@
         display: none;
         transition: .3s ease;
         height: 0;
-        a{
+
+        a {
             transition: .5s ease;
         }
 
@@ -160,6 +166,10 @@
     hr {
         margin-top: 20px;
         margin-bottom: 20px;
+        border-top: 0;
+        
+        border-color: #e5e5e6;
+
     }
 
 
@@ -271,7 +281,9 @@
 
         }
     }
-    .ins_tg_box, .you_fc{
+
+    .ins_tg_box,
+    .you_fc {
         display: flex;
         justify-content: center;
         gap: 5px;
