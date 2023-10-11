@@ -158,6 +158,9 @@ one_var()
 
 function two_var() {
 
+    let clone_arrow_one = document.createElement('img')
+    let clone_arrow_two = document.createElement('img')
+
     let two_variant = document.createElement('div')
     let about_us_contener_two_V = document.createElement('div')
     let about_us_contener_two_V_h1 = document.createElement('h1')
@@ -275,6 +278,9 @@ function two_var() {
     down_two_V_h2.classList.add('h2')
     down_two_V_p.classList.add('p')
 
+    clone_arrow_one.classList.add("clone_arrow")
+    clone_arrow_two.classList.add("clone_arrow")
+
 
     about_us_contener_two_V_h1.innerHTML = "О нас"
     for_users_contner_two_V_h1.innerHTML = "Пользователям"
@@ -314,14 +320,17 @@ function two_var() {
     you_fc_img_YOU.src = "/public/youtube.png"
     you_fc_img_FC.src = "/public/facebook.png"
 
+    clone_arrow_one.src = "/public/clone-arrow.png"
+    clone_arrow_two.src = "/public/clone-arrow.png"
+
 
     footer.append(two_variant)
-    two_variant.append(about_us_contener_two_V, defoult_height, for_entrepreneurs_contner_two_V, defoult_height_two, down_hr, for_entrepreneurs_contner_two_V, up_hr, defoult_height_three, download_box, uzum_network_box_two_V, down_two_V)
-    about_us_contener_two_V.append(about_us_contener_two_V_h1, about_us_contener_two_V_img)
+    two_variant.append(about_us_contener_two_V, defoult_height, for_entrepreneurs_contner_two_V, defoult_height_two, down_hr, for_entrepreneurs_contner_two_V, defoult_height_three, up_hr, download_box, uzum_network_box_two_V, down_two_V)
+    about_us_contener_two_V.append(about_us_contener_two_V_h1, about_us_contener_two_V_img, clone_arrow_one)
     defoult_height.append(defoult_height_a_1, defoult_height_BR, defoult_height_a_2)
     for_users_contner_two_V.append(for_users_contner_two_V_h1, for_users_contner_two_V_img)
     defoult_height_two.append(defoult_height_two_a_1, defoult_height_two_BR, defoult_height_two_a_2)
-    for_entrepreneurs_contner_two_V.append(for_entrepreneurs_contner_two_V_h1, for_entrepreneurs_contner_two_V_img)
+    for_entrepreneurs_contner_two_V.append(for_entrepreneurs_contner_two_V_h1, for_entrepreneurs_contner_two_V_img, clone_arrow_two)
     defoult_height_three.append(defoult_height_three_a_1, defoult_height_three_BR, defoult_height_three_a_2)
     download_box.append(download_box_h1, aplication_flex_box)
     aplication_flex_box.append(apple_box, google_box)
@@ -341,15 +350,46 @@ function two_var() {
     about_us_contener_two_V_img.onclick = () => {
 
         defoult_height_two.style.display = 'block'
+        about_us_contener_two_V_img.style.display = 'none'
+        clone_arrow_one.style.display = 'block'
 
         setTimeout(() => {
-            defoult_height_two.style.height= 30+'px'
+            defoult_height_two.style.height = 30 + 'px'
 
         }, 9);
-/*         about_us_contener_two_V_img.style.height = 100 +'px'
- */
-        console.log('click');
-
     }
+    clone_arrow_one.onclick = () => {
+        defoult_height_two.style.display = 'none'
+        about_us_contener_two_V_img.style.display = 'block'
+        clone_arrow_one.style.display = 'none'
+        setTimeout(() => {
+            defoult_height_two.style.height = 0 + 'px'
+
+        }, 9);
+    }
+
+
+    for_entrepreneurs_contner_two_V_img.onclick = () => {
+
+        defoult_height_three.style.display = 'block'
+        for_entrepreneurs_contner_two_V_img.style.display = 'none'
+        clone_arrow_two.style.display = 'block'
+        setTimeout(() => {
+            defoult_height_three.style.height = 30 + 'px'
+
+        }, 9);
+    }
+
+
+    clone_arrow_two.onclick = () => {
+        defoult_height_three.style.display = 'none'
+        for_entrepreneurs_contner_two_V_img.style.display = 'block'
+        clone_arrow_two.style.display = 'none'
+        setTimeout(() => {
+            defoult_height_three.style.height = 0 + 'px'
+
+        }, 9);
+    }
+
 }
 two_var()

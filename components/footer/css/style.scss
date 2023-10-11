@@ -12,6 +12,7 @@
     column-gap: 14%;
     flex-wrap: wrap;
     row-gap: 50px;
+    margin-top: 70px;
 
     h1 {
         color: #1f1f26;
@@ -98,6 +99,12 @@
 ///////////////one_variant/////////////////
 
 
+.clone_arrow{
+    display: none;
+    transition: .5s ease;
+    
+
+}
 .two_variant {
     margin: 0 auto;
     text-align: center;
@@ -132,7 +139,7 @@
 
     .defoult_height {
         display: none;
-        transition: .5s ease;
+        transition: .3s ease;
         height: 0;
         a{
             transition: .5s ease;
