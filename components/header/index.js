@@ -223,5 +223,8 @@ function hot_hrefs() {
     halal_sale.append(halal_sale_img, halal_sale_img_h2)
     more_box.append(more_a, more_img)
 
+
+    electrician.href = "/components/electrics/index.html"
+
 }
 hot_hrefs()
