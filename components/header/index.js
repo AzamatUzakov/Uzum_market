@@ -88,7 +88,9 @@ function headers_1() {
     favorite_box.append(favorite_box_img, favorite_box_p, favorite_box_quantity_number)
     bascet_box.append(bascet_box_img, bascet_box_p, bascet_box_quantity_number)
 
-
+    uzum_icon_img.onclick = () => {
+location.assign('/')
+    }
 }
 headers_1()
 
@@ -162,6 +164,9 @@ function headers_2() {
     bascet_box.append(bascet_box_img, bascet_box_quantity_number)
 
 
+    uzum_img.onclick = () => {
+        location.assign('/')
+            }
 }
 
 headers_2()
@@ -207,11 +212,11 @@ function hot_hrefs() {
     halal_sale_img_h2.innerHTML = 'Халяльная расрочка'
     electrician.innerHTML = "Электрика"
     appliances.innerHTML = "Бытовая техника"
-    cloth.innerHTML = "Одежда"
-    shoes.innerHTML = "Обувь"
-    accessories.innerHTML = "Аксеасуары"
-    beauty.innerHTML = "Красота"
-    health.innerHTML = "Здоровье"
+    cloth.innerHTML = "Аудио"
+    shoes.innerHTML = "ПК"
+    accessories.innerHTML = "ТВ"
+    beauty.innerHTML = "Кухня"
+    health.innerHTML = "none"
     household_products.innerHTML = "Товары для дома"
     more_a.innerHTML = "Ещё"
 
@@ -219,12 +224,12 @@ function hot_hrefs() {
     halal_sale_img.src = "/public/halal.png"
     more_img.src = "/public/arrow to down.png"
 
-    body_4.append(halal_sale, electrician, appliances, cloth, shoes, accessories, beauty, health, household_products, more_box)
+    body_4.append(halal_sale, electrician, appliances, cloth, shoes, accessories, beauty,  household_products, more_box)
     halal_sale.append(halal_sale_img, halal_sale_img_h2)
     more_box.append(more_a, more_img)
 
 
     electrician.href = "/components/electrics/index.html"
-
+appliances.href = "/components/technic/index.html"
 }
 hot_hrefs()
