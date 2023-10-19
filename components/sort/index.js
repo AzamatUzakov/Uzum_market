@@ -1,7 +1,7 @@
 
 
 
-export function sort() {
+ function sort() {
     let sort_cont = document.querySelector('.sort_cont')
 
     let title_sort_cont = document.createElement('div')

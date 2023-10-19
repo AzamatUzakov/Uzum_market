@@ -1,7 +1,7 @@
 let categories = document.querySelectorAll('#catigoria_hrefs')
 let all_catigories_btn = document.querySelector(".all")
 let main_href = document.querySelector('.main')
-let electriks_href = document.querySelector('.technic')
+let electriks_href = document.querySelector('.audio')
 console.log(all_catigories_btn);
 
 
@@ -35,7 +35,7 @@ function sort() {
     filter_p.classList.add('fill')
     hr.classList.add('hr')
 
-    title_sort_cont_h1.innerHTML = "Бытовая техника"
+    title_sort_cont_h1.innerHTML = "Аудио"
     sort_box_p.innerHTML = "Сортировка"
     cheap_opt.innerHTML = "Подешевле"
     moreExpensive_opt.innerHTML = "Подароже"

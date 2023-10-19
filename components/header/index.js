@@ -89,7 +89,7 @@ function headers_1() {
     bascet_box.append(bascet_box_img, bascet_box_p, bascet_box_quantity_number)
 
     uzum_icon_img.onclick = () => {
-location.assign('/')
+        location.assign('/')
     }
 }
 headers_1()
@@ -166,7 +166,7 @@ function headers_2() {
 
     uzum_img.onclick = () => {
         location.assign('/')
-            }
+    }
 }
 
 headers_2()
@@ -224,12 +224,17 @@ function hot_hrefs() {
     halal_sale_img.src = "/public/halal.png"
     more_img.src = "/public/arrow to down.png"
 
-    body_4.append(halal_sale, electrician, appliances, cloth, shoes, accessories, beauty,  household_products, more_box)
+    body_4.append(halal_sale, electrician, appliances, cloth, shoes, accessories, beauty, household_products, more_box)
     halal_sale.append(halal_sale_img, halal_sale_img_h2)
     more_box.append(more_a, more_img)
 
 
     electrician.href = "/components/electrics/index.html"
-appliances.href = "/components/technic/index.html"
+    appliances.href = "/components/technic/index.html"
+    cloth.href = "/components/audioo/index.html"
+    accessories.href = "/components/tv/index.html"
+    shoes.href = "/components/pc/index.html"
+    beauty.href = "/components/kitchen/index.html"
+    household_products.href = "/components/home_products/index.html"
 }
 hot_hrefs()
