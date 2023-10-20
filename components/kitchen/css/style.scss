@@ -41,8 +41,35 @@
 
         .saidbarg {
             h1 {
-                font-size: 17px;
-font-weight: 500;
+                font-size: 18px;
+                font-weight: 500;
+                color: #5a5959;
+                margin: 20px 0 15px;
+            }
+
+            .titels {
+                padding: 0 0 0 15px;
+                margin-bottom: 25px;
+
+                p {
+
+                    color: #353535;
+                    font-size: 15px;
+                    margin-top: 3px;
+                    font-weight: 400;
+                }
+
+                .all_catigories_title {
+                    display: flex;
+                    align-items: center;
+                    margin-left: -10px;
+
+                    img {
+                        width: 10px;
+                        margin-top: 5px;
+                        fill: black;
+                    }
+                }
             }
         }
 
