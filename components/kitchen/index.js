@@ -2,7 +2,6 @@ let categories = document.querySelectorAll('#catigoria_hrefs')
 let all_catigories_btn = document.querySelector(".all")
 let main_href = document.querySelector('.main')
 let electriks_href = document.querySelector('.kitchen')
-console.log(all_catigories_btn);
 
 
 function sort() {
@@ -85,11 +84,41 @@ categories.forEach(btn => {
 });
 all_catigories_btn.onclick = () => {
     electriks_href.remove()
-/*     localStorage.setItem("all_catigor", location.assign('/components/technic/index.html'))
- */
+    /*     localStorage.setItem("all_catigor", location.assign('/components/technic/index.html'))
+     */
 }
 
 
 main_href.onclick = () => {
     location.assign('/')
+}
+window.onload = function () {
+    slideOne();
+    slideTwo();
+}
+let sliderOne = document.getElementById("slider-1");
+let sliderTwo = document.getElementById("slider-2");
+let displayValOne = document.getElementById("range1");
+let displayValTwo = document.getElementById("range2");
+let minGap = 0;
+let sliderTrack = document.querySelector(".slider-track");
+let sliderMaxValue = document.getElementById("slider-1").max;
+function slideOne() {
+    if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
+        sliderOne.value = parseInt(sliderTwo.value) - minGap;
+    }
+    displayValOne.textContent = sliderOne.value;
+    fillColor();
+}
+function slideTwo() {
+    if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
+        sliderTwo.value = parseInt(sliderOne.value) + minGap;
+    }
+    displayValTwo.textContent = sliderTwo.value;
+    fillColor();
+}
+function fillColor() {
+    percent1 = (sliderOne.value / sliderMaxValue) * 100;
+    percent2 = (sliderTwo.value / sliderMaxValue) * 100;
+    sliderTrack.style.background = `linear-gradient(to right,#dadae5  ${percent1}% , #7000ff ${percent1}% , #7000ff ${percent2}%, #dadae5 ${percent2}%)`;
 }

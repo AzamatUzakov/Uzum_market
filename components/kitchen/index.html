@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/components/header/css/media.scss">
     <link rel="stylesheet" href="/components/sort/css/style.scss">
     <link rel="stylesheet" href="/components/sort/css/media.scss">
+    <link rel="stylesheet" href="css/wraper.css">
 </head>
 
 <body>
@@ -50,18 +51,71 @@
 
                 <div class="price_box">
                     <h2>Цена</h2>
-                    
+                    <div class="clear_btn">Очистить</div>
+                    <div class="inputs_box">
+                        <p id="range1">0</p>
+                        <p id="range2">1000</p>
+                    </div>
+
+                    <div class="container">
+                        <div class="slider-track"></div>
+                        <input type="range" min="0" max="1000" value="0" id="slider-1" oninput="slideOne()">
+                        <input type="range" min="0" max="1000" value="1000" id="slider-2" oninput="slideTwo()">
+                    </div>
+                </div>
+
+                <div class="colors">
+                    <h3>Цвет</h3>
+                    <div class="black">
+                        <div class="item"></div>
+                        <p>Черный</p>
+                    </div>
+
+                    <div class="orange">
+                        <div class="item"></div>
+                        <p>Оранжевый</p>
+                    </div>
+
+                    <div class="blue">
+                        <div class="item"></div>
+                        <p>Синий</p>
+                    </div>
+
+                    <div class="green">
+                        <div class="item"></div>
+                        <p>Зеленый</p>
+                    </div>
+
+                    <div class="red">
+                        <div class="item"></div>
+                        <p>Крассный</p>
+                    </div>
+
+                    <div class="gray">
+                        <div class="item"></div>
+                        <p>Серый</p>
+                    </div>
+
+                    <div class="white">
+                        <div class="item"></div>
+                        <p>Белый</p>
+                    </div>
+
+                </div>
+                <div class="clear_btn">
+                    <button>Очистить всё</button>
                 </div>
             </div>
-
-
         </div>
 
 
     </div>
 
+
+    </div>
+
     <script type="module" src="/components/header/index.js"></script>
-    <script type="module" src="./index.js"></script>
+    <script src="./index.js"></script>
 </body>
 
 </html>

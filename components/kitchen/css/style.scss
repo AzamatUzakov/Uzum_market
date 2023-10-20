@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.kitchen_contener{
+.kitchen_contener {
     max-width: 1500px;
     padding: 30px 40px;
 
@@ -34,5 +34,19 @@
             transition: .4s ease;
         }
     }
+
+
+
+    .spa_case {
+
+        .saidbarg {
+            h1 {
+                font-size: 17px;
+font-weight: 500;
+            }
+        }
+
+    }
+
 
 }
