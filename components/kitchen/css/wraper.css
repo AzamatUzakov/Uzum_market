@@ -2,7 +2,7 @@
 
 .container{
     position: relative;
-    width: 10%;
+    width: 20%;
     height: 50px;
 }
 input[type="range"]{
