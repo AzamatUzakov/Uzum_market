@@ -40,6 +40,9 @@
     .spa_case {
 
         .saidbarg {
+            max-width: 300px;
+          //  background-color: rgb(230, 230, 230);
+
             h1 {
                 font-size: 18px;
                 font-weight: 500;
@@ -86,7 +89,7 @@
                     font-size: 13px;
                     color: gray;
                     transition: .5s ease;
-                    display: block;
+                    display: none;
                     cursor: pointer;
                 }
 
@@ -120,12 +123,77 @@
                     font-size: 18px;
                     font-weight: 500;
                     color: #5a5959;
+                    margin: 30px 0 20px;
                 }
 
-                .elem{
-                    width: 30px;
-                    height: 30px;
-                    background-color: #5a5959
+                .elem {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    margin-top: 12px;
+
+                    .item {
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 100%;
+
+                    }
+
+                    .b {
+                        background-color: black;
+                        border: 1px solid wheat;
+
+                    }
+
+                    .or {
+                        background-color: orange;
+                        border: 1px solid wheat;
+                    }
+
+                    .bl {
+                        background-color: skyblue;
+                        border: 1px solid wheat;
+
+                    }
+
+                    .gr {
+                        background-color: #64b260;
+                        border: 1px solid wheat;
+
+                    }
+
+                    .r {
+                        background-color: red;
+                        border: 1px solid wheat;
+
+                    }
+
+                    .g {
+                        background-color: gray;
+                        border: 1px solid wheat;
+
+                    }
+
+                    .wh {
+                        background-color: white;
+                        border: 1px solid wheat;
+                    }
+                }
+            }
+
+            .clear_btns {
+                text-align: center;
+                padding: 30px;
+
+                button {
+                    height: 40px;
+                    width: 100%;
+                    border-radius: 10px;
+                    background-color: white;
+                    border: 1px solid rgb(172, 172, 172);
+                    font-size: 15px;
+                    font-weight: 500;
+                    color: #1e2434;
                 }
             }
         }
