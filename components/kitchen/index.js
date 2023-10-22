@@ -1,7 +1,9 @@
+import { getData } from '/modules/http';
 let categories = document.querySelectorAll('#catigoria_hrefs')
 let all_catigories_btn = document.querySelector(".all")
 let main_href = document.querySelector('.main')
 let electriks_href = document.querySelector('.kitchen')
+let aside_case = document.querySelector('.aside_box')
 
 
 function sort() {
@@ -92,33 +94,86 @@ all_catigories_btn.onclick = () => {
 main_href.onclick = () => {
     location.assign('/')
 }
-window.onload = function () {
-    slideOne();
-    slideTwo();
-}
-let sliderOne = document.getElementById("slider-1");
-let sliderTwo = document.getElementById("slider-2");
-let displayValOne = document.getElementById("range1");
-let displayValTwo = document.getElementById("range2");
-let minGap = 0;
-let sliderTrack = document.querySelector(".slider-track");
-let sliderMaxValue = document.getElementById("slider-1").max;
-function slideOne() {
-    if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
-        sliderOne.value = parseInt(sliderTwo.value) - minGap;
+
+let kitchen_arr = []
+getData('/goods')
+    .then(res => {
+        for (let item of res.data) {
+            if (item.type === "kitchen") {
+                kitchen_arr.push(item)
+            }
+        }
+        for (let item of kitchen_arr) {
+            let goods_main_box = document.createElement('div')
+
+            let poster_box = document.createElement('div')
+            let heart_position = document.createElement('div')
+            let heart_position_img = document.createElement('img')
+            let poster_img_box = document.createElement('div')
+            let poster_img_box_img = document.createElement('img')
+            let title = document.createElement('div')
+            let title_p = document.createElement('p')
+            let grade = document.createElement('div')
+            let grade_p = document.createElement('p')
+            let grade_p_num = document.createElement('p')
+            let credit = document.createElement('div')
+            let promotion = document.createElement('div')
+            let price_flex_cont = document.createElement('div')
+            let price_flex_cont_p = document.createElement('p')
+            let shop_box = document.createElement('div')
+            let shop_box_img = document.createElement('img')
+
+            goods_main_box.classList.add("goods_main_box")
+            poster_box.classList.add("poster_box")
+            heart_position.classList.add("heart_position")
+            poster_img_box.classList.add("poster_img_box")
+            poster_img_box_img.classList.add("poster_img")
+            title.classList.add("title")
+            grade.classList.add("grade")
+            credit.classList.add("credit")
+            promotion.classList.add("promotion")
+            price_flex_cont.classList.add("price_flex_cont")
+            shop_box.classList.add("shop_box")
+
+            let date = new Date
+            let month = date.getMonth()
+            let price_replace = item.price.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, " ")
+
+            let loan_per_month = Math.round(item.price / month)/* .toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ')
+            loan_per_month */
+            title_p.innerHTML = item.title.slice(0, 70)
+            grade.innerHTML = '⭐️'
+            grade_p.innerHTML = item.rating
+            grade_p_num.innerHTML = `(${item.salePercentage} оценка)`
+            promotion.innerHTML = "32000 сум"
+            price_flex_cont_p.innerHTML = price_replace + " 00"
+            credit.innerHTML = loan_per_month + " 00 сум/мес"
+
+
+            heart_position_img.src = "/public/love.png"
+            shop_box_img.src = "/public/shopping-cart 1.png"
+            poster_img_box_img.src = item.media[0]
+
+
+
+
+
+
+
+            aside_case.append(goods_main_box)
+            goods_main_box.append(poster_box, title, grade, credit, promotion, price_flex_cont)
+            poster_box.append(heart_position, poster_img_box)
+            heart_position.append(heart_position_img)
+            poster_img_box.append(poster_img_box_img)
+            title.append(title_p)
+            grade.append(grade_p, grade_p_num)
+            price_flex_cont.append(price_flex_cont_p, shop_box)
+            shop_box.append(shop_box_img)
+
+
+
+
+        }
     }
-    displayValOne.textContent = sliderOne.value;
-    fillColor();
-}
-function slideTwo() {
-    if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
-        sliderTwo.value = parseInt(sliderOne.value) + minGap;
-    }
-    displayValTwo.textContent = sliderTwo.value;
-    fillColor();
-}
-function fillColor() {
-    percent1 = (sliderOne.value / sliderMaxValue) * 100;
-    percent2 = (sliderTwo.value / sliderMaxValue) * 100;
-    sliderTrack.style.background = `linear-gradient(to right,#dadae5  ${percent1}% , #7000ff ${percent1}% , #7000ff ${percent2}%, #dadae5 ${percent2}%)`;
-}
+    )
+

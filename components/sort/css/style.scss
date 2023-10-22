@@ -13,12 +13,13 @@
     .title_sort_cont {
         display: flex;
         justify-content: space-between;
-        margin-top: 40px;
+        margin-top: 20px;
         margin-bottom: 17px;
 
         h1 {
             font-size: 26px;
             font-weight: 500;
+            margin: 0;
         }
 
         .sort_box {

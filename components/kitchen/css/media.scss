@@ -1,0 +1,1660 @@
+@media(max-width: 1313px) {
+
+    .kitchen_contener {
+        max-width: 1500px;
+        padding: 30px 40px;
+        margin: 0 auto;
+
+        .categories_block {
+            margin-top: 20px;
+
+            a {
+                text-decoration: none;
+                color: #c3c3c3;
+                font-size: 13px;
+
+
+            }
+
+            :nth-child(3) {
+                color: black;
+            }
+
+
+            .active {
+                color: black;
+
+            }
+
+            :hover {
+                color: black;
+                transition: .4s ease;
+            }
+        }
+
+
+
+        .spa_case {
+            display: flex;
+            justify-content: space-between;
+            gap: 45px;
+
+            .saidbarg {
+                max-width: 300px;
+                //  background-color: rgb(230, 230, 230);
+
+                h1 {
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: #5a5959;
+                    margin: 20px 0 15px;
+                }
+
+                .titels {
+                    padding: 0 0 0 15px;
+                    margin-bottom: 25px;
+
+                    p {
+                        cursor: pointer;
+                        color: #353535;
+                        font-size: 15px;
+                        margin-top: 5px;
+                        font-weight: 400;
+                    }
+
+                    .all_catigories_title {
+                        display: flex;
+                        align-items: center;
+                        margin-left: -15px;
+                        gap: 5px;
+
+                        img {
+                            width: 10px;
+                            margin-top: 6px;
+                            fill: black;
+                        }
+                    }
+                }
+
+                .price_box {
+                    margin: 30px 0 0;
+
+                    h2 {
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: #5a5959;
+                    }
+
+                    .clear_btn {
+                        font-size: 13px;
+                        color: gray;
+                        transition: .5s ease;
+                        display: none;
+                        cursor: pointer;
+                    }
+
+                    .inputs_box {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        .it {
+                            width: 130px;
+                            height: 40px;
+                            border: 1px solid gainsboro;
+                            border-radius: 4px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 0 10px;
+                            margin-top: 20px;
+
+                            h1 {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+
+                }
+
+                .colors {
+                    h3 {
+                        margin-top: 30px;
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: #5a5959;
+                        margin: 30px 0 20px;
+                    }
+
+                    .elem {
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+                        margin-top: 12px;
+                        cursor: pointer;
+
+                        .item {
+                            width: 25px;
+                            height: 25px;
+                            border-radius: 100%;
+                            cursor: pointer;
+                        }
+
+                        .b {
+                            background-color: black;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .or {
+                            background-color: orange;
+                            border: 1px solid wheat;
+                        }
+
+                        .bl {
+                            background-color: skyblue;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .gr {
+                            background-color: #64b260;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .r {
+                            background-color: red;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .g {
+                            background-color: gray;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .wh {
+                            background-color: white;
+                            border: 1px solid wheat;
+                        }
+                    }
+                }
+
+                .clear_btns {
+                    text-align: center;
+                    padding: 30px;
+
+                    button {
+                        height: 40px;
+                        width: 100%;
+                        border-radius: 10px;
+                        background-color: white;
+                        border: 1px solid rgb(172, 172, 172);
+                        font-size: 15px;
+                        font-weight: 500;
+                        color: #1e2434;
+                    }
+                }
+            }
+
+            .aside_case {
+                margin-top: 40px;
+            }
+
+            .aside_box {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                row-gap: 20px;
+
+
+                .goods_main_box {
+                    width: 200px;
+                    height: 100%;
+                    border-radius: 12px;
+
+                    .poster_box {
+                        width: 100%;
+                        height: 270px;
+                        //  background-color: #efefef;
+                        padding: 20px;
+                        border-radius: 10px;
+                        border: 1px solid black;
+                    }
+                }
+
+            }
+
+
+        }
+    }
+}
+
+
+
+@media(max-width: 960px) {
+
+    .kitchen_contener {
+        max-width: 1500px;
+        padding: 20px 20px;
+        margin: 0 auto;
+
+        .categories_block {
+            margin-top: 20px;
+
+            a {
+                text-decoration: none;
+                color: #c3c3c3;
+                font-size: 13px;
+
+
+            }
+
+            :nth-child(3) {
+                color: black;
+            }
+
+
+            .active {
+                color: black;
+
+            }
+
+            :hover {
+                color: black;
+                transition: .4s ease;
+            }
+        }
+
+
+
+        .spa_case {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+
+            .saidbarg {
+                max-width: 300px;
+                display: none;
+                //  background-color: rgb(230, 230, 230);
+
+                h1 {
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: #5a5959;
+                    margin: 20px 0 15px;
+                }
+
+                .titels {
+                    padding: 0 0 0 15px;
+                    margin-bottom: 25px;
+
+                    p {
+                        cursor: pointer;
+                        color: #353535;
+                        font-size: 15px;
+                        margin-top: 5px;
+                        font-weight: 400;
+                    }
+
+                    .all_catigories_title {
+                        display: flex;
+                        align-items: center;
+                        margin-left: -15px;
+                        gap: 5px;
+
+                        img {
+                            width: 10px;
+                            margin-top: 6px;
+                            fill: black;
+                        }
+                    }
+                }
+
+                .price_box {
+                    margin: 30px 0 0;
+
+                    h2 {
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: #5a5959;
+                    }
+
+                    .clear_btn {
+                        font-size: 13px;
+                        color: gray;
+                        transition: .5s ease;
+                        display: none;
+                        cursor: pointer;
+                    }
+
+                    .inputs_box {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        .it {
+                            width: 130px;
+                            height: 40px;
+                            border: 1px solid gainsboro;
+                            border-radius: 4px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 0 10px;
+                            margin-top: 20px;
+
+                            h1 {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+
+                }
+
+                .colors {
+                    h3 {
+                        margin-top: 30px;
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: #5a5959;
+                        margin: 30px 0 20px;
+                    }
+
+                    .elem {
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+                        margin-top: 12px;
+                        cursor: pointer;
+
+                        .item {
+                            width: 25px;
+                            height: 25px;
+                            border-radius: 100%;
+                            cursor: pointer;
+                        }
+
+                        .b {
+                            background-color: black;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .or {
+                            background-color: orange;
+                            border: 1px solid wheat;
+                        }
+
+                        .bl {
+                            background-color: skyblue;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .gr {
+                            background-color: #64b260;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .r {
+                            background-color: red;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .g {
+                            background-color: gray;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .wh {
+                            background-color: white;
+                            border: 1px solid wheat;
+                        }
+                    }
+                }
+
+                .clear_btns {
+                    text-align: center;
+                    padding: 30px;
+
+                    button {
+                        height: 40px;
+                        width: 100%;
+                        border-radius: 10px;
+                        background-color: white;
+                        border: 1px solid rgb(172, 172, 172);
+                        font-size: 15px;
+                        font-weight: 500;
+                        color: #1e2434;
+                    }
+                }
+            }
+
+            .aside_case {
+                margin-top: 40px;
+            }
+
+            .aside_box {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 8px;
+                row-gap: 20px;
+
+
+                .goods_main_box {
+                    width: 200px;
+                    height: 100%;
+                    border-radius: 12px;
+
+                    .poster_box {
+                        width: 100%;
+                        height: 270px;
+                        //  background-color: #efefef;
+                        padding: 20px;
+                        border-radius: 10px;
+                        border: 1px solid black;
+                    }
+                }
+
+            }
+
+
+        }
+    }
+}
+
+
+
+
+@media(max-width: 830px) {
+
+    .kitchen_contener {
+        max-width: 1500px;
+        padding: 30px 15px;
+        margin: 0 auto;
+
+        .categories_block {
+            margin-top: 20px;
+
+            a {
+                text-decoration: none;
+                color: #c3c3c3;
+                font-size: 13px;
+
+
+            }
+
+            :nth-child(3) {
+                color: black;
+            }
+
+
+            .active {
+                color: black;
+
+            }
+
+            :hover {
+                color: black;
+                transition: .4s ease;
+            }
+        }
+
+
+
+        .spa_case {
+            display: flex;
+            gap: 40px;
+
+            .saidbarg {
+                max-width: 300px;
+                //  background-color: rgb(230, 230, 230);
+
+                h1 {
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: #5a5959;
+                    margin: 20px 0 15px;
+                }
+
+                .titels {
+                    padding: 0 0 0 15px;
+                    margin-bottom: 25px;
+
+                    p {
+                        cursor: pointer;
+                        color: #353535;
+                        font-size: 15px;
+                        margin-top: 5px;
+                        font-weight: 400;
+                    }
+
+                    .all_catigories_title {
+                        display: flex;
+                        align-items: center;
+                        margin-left: -15px;
+                        gap: 5px;
+
+                        img {
+                            width: 10px;
+                            margin-top: 6px;
+                            fill: black;
+                        }
+                    }
+                }
+
+                .price_box {
+                    margin: 30px 0 0;
+
+                    h2 {
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: #5a5959;
+                    }
+
+                    .clear_btn {
+                        font-size: 13px;
+                        color: gray;
+                        transition: .5s ease;
+                        display: none;
+                        cursor: pointer;
+                    }
+
+                    .inputs_box {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        .it {
+                            width: 130px;
+                            height: 40px;
+                            border: 1px solid gainsboro;
+                            border-radius: 4px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 0 10px;
+                            margin-top: 20px;
+
+                            h1 {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+
+                }
+
+                .colors {
+                    h3 {
+                        margin-top: 30px;
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: #5a5959;
+                        margin: 30px 0 20px;
+                    }
+
+                    .elem {
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+                        margin-top: 12px;
+                        cursor: pointer;
+
+                        .item {
+                            width: 25px;
+                            height: 25px;
+                            border-radius: 100%;
+                            cursor: pointer;
+                        }
+
+                        .b {
+                            background-color: black;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .or {
+                            background-color: orange;
+                            border: 1px solid wheat;
+                        }
+
+                        .bl {
+                            background-color: skyblue;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .gr {
+                            background-color: #64b260;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .r {
+                            background-color: red;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .g {
+                            background-color: gray;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .wh {
+                            background-color: white;
+                            border: 1px solid wheat;
+                        }
+                    }
+                }
+
+                .clear_btns {
+                    text-align: center;
+                    padding: 30px;
+
+                    button {
+                        height: 40px;
+                        width: 100%;
+                        border-radius: 10px;
+                        background-color: white;
+                        border: 1px solid rgb(172, 172, 172);
+                        font-size: 15px;
+                        font-weight: 500;
+                        color: #1e2434;
+                    }
+                }
+            }
+
+            .aside_case {
+                margin-top: 40px;
+            }
+
+            .aside_box {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                row-gap: 20px;
+
+
+                .goods_main_box {
+                    width: 190px;
+                    height: 100%;
+                    border-radius: 12px;
+
+                    .poster_box {
+                        width: 100%;
+                        height: 250px;
+                        //  background-color: #efefef;
+                        padding: 20px;
+                        border-radius: 10px;
+                        border: 1px solid black;
+                    }
+                }
+
+            }
+
+
+        }
+    }
+}
+
+@media(max-width: 700px) {
+
+    .kitchen_contener {
+        max-width: 1500px;
+        padding: 30px 20px;
+        margin: 0 auto;
+
+        .categories_block {
+            margin-top: 20px;
+
+            a {
+                text-decoration: none;
+                color: #c3c3c3;
+                font-size: 13px;
+
+
+            }
+
+            :nth-child(3) {
+                color: black;
+            }
+
+
+            .active {
+                color: black;
+
+            }
+
+            :hover {
+                color: black;
+                transition: .4s ease;
+            }
+        }
+
+
+
+        .spa_case {
+            display: flex;
+            gap: 40px;
+
+            .saidbarg {
+                max-width: 300px;
+                //  background-color: rgb(230, 230, 230);
+
+                h1 {
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: #5a5959;
+                    margin: 20px 0 15px;
+                }
+
+                .titels {
+                    padding: 0 0 0 15px;
+                    margin-bottom: 25px;
+
+                    p {
+                        cursor: pointer;
+                        color: #353535;
+                        font-size: 15px;
+                        margin-top: 5px;
+                        font-weight: 400;
+                    }
+
+                    .all_catigories_title {
+                        display: flex;
+                        align-items: center;
+                        margin-left: -15px;
+                        gap: 5px;
+
+                        img {
+                            width: 10px;
+                            margin-top: 6px;
+                            fill: black;
+                        }
+                    }
+                }
+
+                .price_box {
+                    margin: 30px 0 0;
+
+                    h2 {
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: #5a5959;
+                    }
+
+                    .clear_btn {
+                        font-size: 13px;
+                        color: gray;
+                        transition: .5s ease;
+                        display: none;
+                        cursor: pointer;
+                    }
+
+                    .inputs_box {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        .it {
+                            width: 130px;
+                            height: 40px;
+                            border: 1px solid gainsboro;
+                            border-radius: 4px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 0 10px;
+                            margin-top: 20px;
+
+                            h1 {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+
+                }
+
+                .colors {
+                    h3 {
+                        margin-top: 30px;
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: #5a5959;
+                        margin: 30px 0 20px;
+                    }
+
+                    .elem {
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+                        margin-top: 12px;
+                        cursor: pointer;
+
+                        .item {
+                            width: 25px;
+                            height: 25px;
+                            border-radius: 100%;
+                            cursor: pointer;
+                        }
+
+                        .b {
+                            background-color: black;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .or {
+                            background-color: orange;
+                            border: 1px solid wheat;
+                        }
+
+                        .bl {
+                            background-color: skyblue;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .gr {
+                            background-color: #64b260;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .r {
+                            background-color: red;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .g {
+                            background-color: gray;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .wh {
+                            background-color: white;
+                            border: 1px solid wheat;
+                        }
+                    }
+                }
+
+                .clear_btns {
+                    text-align: center;
+                    padding: 30px;
+
+                    button {
+                        height: 40px;
+                        width: 100%;
+                        border-radius: 10px;
+                        background-color: white;
+                        border: 1px solid rgb(172, 172, 172);
+                        font-size: 15px;
+                        font-weight: 500;
+                        color: #1e2434;
+                    }
+                }
+            }
+
+            .aside_case {
+                margin-top: 40px;
+            }
+
+            .aside_box {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                row-gap: 20px;
+
+
+                .goods_main_box {
+                    width: 200px;
+                    height: 100%;
+                    border-radius: 12px;
+
+                    .poster_box {
+                        width: 100%;
+                        height: 270px;
+                        //  background-color: #efefef;
+                        padding: 20px;
+                        border-radius: 10px;
+                        border: 1px solid black;
+                    }
+                }
+
+            }
+
+
+        }
+    }
+}
+
+
+
+
+@media(max-width: 500px) {
+
+    .kitchen_contener {
+        max-width: 1500px;
+        padding: 30px 20px;
+        margin: 0 auto;
+
+        .categories_block {
+            margin-top: 20px;
+
+            a {
+                text-decoration: none;
+                color: #c3c3c3;
+                font-size: 13px;
+
+
+            }
+
+            :nth-child(3) {
+                color: black;
+            }
+
+
+            .active {
+                color: black;
+
+            }
+
+            :hover {
+                color: black;
+                transition: .4s ease;
+            }
+        }
+
+
+
+        .spa_case {
+            display: flex;
+            gap: 40px;
+
+            .saidbarg {
+                max-width: 300px;
+                //  background-color: rgb(230, 230, 230);
+
+                h1 {
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: #5a5959;
+                    margin: 20px 0 15px;
+                }
+
+                .titels {
+                    padding: 0 0 0 15px;
+                    margin-bottom: 25px;
+
+                    p {
+                        cursor: pointer;
+                        color: #353535;
+                        font-size: 15px;
+                        margin-top: 5px;
+                        font-weight: 400;
+                    }
+
+                    .all_catigories_title {
+                        display: flex;
+                        align-items: center;
+                        margin-left: -15px;
+                        gap: 5px;
+
+                        img {
+                            width: 10px;
+                            margin-top: 6px;
+                            fill: black;
+                        }
+                    }
+                }
+
+                .price_box {
+                    margin: 30px 0 0;
+
+                    h2 {
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: #5a5959;
+                    }
+
+                    .clear_btn {
+                        font-size: 13px;
+                        color: gray;
+                        transition: .5s ease;
+                        display: none;
+                        cursor: pointer;
+                    }
+
+                    .inputs_box {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        .it {
+                            width: 130px;
+                            height: 40px;
+                            border: 1px solid gainsboro;
+                            border-radius: 4px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 0 10px;
+                            margin-top: 20px;
+
+                            h1 {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+
+                }
+
+                .colors {
+                    h3 {
+                        margin-top: 30px;
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: #5a5959;
+                        margin: 30px 0 20px;
+                    }
+
+                    .elem {
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+                        margin-top: 12px;
+                        cursor: pointer;
+
+                        .item {
+                            width: 25px;
+                            height: 25px;
+                            border-radius: 100%;
+                            cursor: pointer;
+                        }
+
+                        .b {
+                            background-color: black;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .or {
+                            background-color: orange;
+                            border: 1px solid wheat;
+                        }
+
+                        .bl {
+                            background-color: skyblue;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .gr {
+                            background-color: #64b260;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .r {
+                            background-color: red;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .g {
+                            background-color: gray;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .wh {
+                            background-color: white;
+                            border: 1px solid wheat;
+                        }
+                    }
+                }
+
+                .clear_btns {
+                    text-align: center;
+                    padding: 30px;
+
+                    button {
+                        height: 40px;
+                        width: 100%;
+                        border-radius: 10px;
+                        background-color: white;
+                        border: 1px solid rgb(172, 172, 172);
+                        font-size: 15px;
+                        font-weight: 500;
+                        color: #1e2434;
+                    }
+                }
+            }
+
+            .aside_case {
+                margin-top: 40px;
+            }
+
+            .aside_box {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                row-gap: 20px;
+
+
+                .goods_main_box {
+                    width: 160px;
+                    height: 100%;
+                    border-radius: 12px;
+
+                    .poster_box {
+                        width: 100%;
+                        height: 210px;
+                        //  background-color: #efefef;
+                        padding: 20px;
+                        border-radius: 10px;
+                        border: 1px solid black;
+                    }
+                }
+
+            }
+
+
+        }
+    }
+}
+
+
+
+@media(max-width: 370px) {
+
+    .kitchen_contener {
+        max-width: 1500px;
+        padding: 30px 15px;
+        margin: 0 auto;
+
+        .categories_block {
+            margin-top: 20px;
+
+            a {
+                text-decoration: none;
+                color: #c3c3c3;
+                font-size: 13px;
+
+
+            }
+
+            :nth-child(3) {
+                color: black;
+            }
+
+
+            .active {
+                color: black;
+
+            }
+
+            :hover {
+                color: black;
+                transition: .4s ease;
+            }
+        }
+
+
+
+        .spa_case {
+            display: flex;
+            gap: 40px;
+
+            .saidbarg {
+                max-width: 300px;
+                //  background-color: rgb(230, 230, 230);
+
+                h1 {
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: #5a5959;
+                    margin: 20px 0 15px;
+                }
+
+                .titels {
+                    padding: 0 0 0 15px;
+                    margin-bottom: 25px;
+
+                    p {
+                        cursor: pointer;
+                        color: #353535;
+                        font-size: 15px;
+                        margin-top: 5px;
+                        font-weight: 400;
+                    }
+
+                    .all_catigories_title {
+                        display: flex;
+                        align-items: center;
+                        margin-left: -15px;
+                        gap: 5px;
+
+                        img {
+                            width: 10px;
+                            margin-top: 6px;
+                            fill: black;
+                        }
+                    }
+                }
+
+                .price_box {
+                    margin: 30px 0 0;
+
+                    h2 {
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: #5a5959;
+                    }
+
+                    .clear_btn {
+                        font-size: 13px;
+                        color: gray;
+                        transition: .5s ease;
+                        display: none;
+                        cursor: pointer;
+                    }
+
+                    .inputs_box {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        .it {
+                            width: 130px;
+                            height: 40px;
+                            border: 1px solid gainsboro;
+                            border-radius: 4px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 0 10px;
+                            margin-top: 20px;
+
+                            h1 {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+
+                }
+
+                .colors {
+                    h3 {
+                        margin-top: 30px;
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: #5a5959;
+                        margin: 30px 0 20px;
+                    }
+
+                    .elem {
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+                        margin-top: 12px;
+                        cursor: pointer;
+
+                        .item {
+                            width: 25px;
+                            height: 25px;
+                            border-radius: 100%;
+                            cursor: pointer;
+                        }
+
+                        .b {
+                            background-color: black;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .or {
+                            background-color: orange;
+                            border: 1px solid wheat;
+                        }
+
+                        .bl {
+                            background-color: skyblue;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .gr {
+                            background-color: #64b260;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .r {
+                            background-color: red;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .g {
+                            background-color: gray;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .wh {
+                            background-color: white;
+                            border: 1px solid wheat;
+                        }
+                    }
+                }
+
+                .clear_btns {
+                    text-align: center;
+                    padding: 30px;
+
+                    button {
+                        height: 40px;
+                        width: 100%;
+                        border-radius: 10px;
+                        background-color: white;
+                        border: 1px solid rgb(172, 172, 172);
+                        font-size: 15px;
+                        font-weight: 500;
+                        color: #1e2434;
+                    }
+                }
+            }
+
+            .aside_case {
+                margin-top: 40px;
+            }
+
+            .aside_box {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                row-gap: 20px;
+
+
+                .goods_main_box {
+                    width: 150px;
+                    height: 100%;
+                    border-radius: 12px;
+
+                    .poster_box {
+                        width: 100%;
+                        height: 220px;
+                        //  background-color: #efefef;
+                        padding: 20px;
+                        border-radius: 10px;
+                        border: 1px solid black;
+                    }
+                }
+
+            }
+
+
+        }
+    }
+}
+
+
+
+
+
+@media(max-width: 280px) {
+
+    .kitchen_contener {
+        max-width: 1500px;
+        padding: 30px 10px;
+        margin: 0 auto;
+
+        .categories_block {
+            margin-top: 20px;
+
+            a {
+                text-decoration: none;
+                color: #c3c3c3;
+                font-size: 13px;
+
+
+            }
+
+            :nth-child(3) {
+                color: black;
+            }
+
+
+            .active {
+                color: black;
+
+            }
+
+            :hover {
+                color: black;
+                transition: .4s ease;
+            }
+        }
+
+
+
+        .spa_case {
+            display: flex;
+            gap: 40px;
+
+            .saidbarg {
+                max-width: 300px;
+                //  background-color: rgb(230, 230, 230);
+
+                h1 {
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: #5a5959;
+                    margin: 20px 0 15px;
+                }
+
+                .titels {
+                    padding: 0 0 0 15px;
+                    margin-bottom: 25px;
+
+                    p {
+                        cursor: pointer;
+                        color: #353535;
+                        font-size: 15px;
+                        margin-top: 5px;
+                        font-weight: 400;
+                    }
+
+                    .all_catigories_title {
+                        display: flex;
+                        align-items: center;
+                        margin-left: -15px;
+                        gap: 5px;
+
+                        img {
+                            width: 10px;
+                            margin-top: 6px;
+                            fill: black;
+                        }
+                    }
+                }
+
+                .price_box {
+                    margin: 30px 0 0;
+
+                    h2 {
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: #5a5959;
+                    }
+
+                    .clear_btn {
+                        font-size: 13px;
+                        color: gray;
+                        transition: .5s ease;
+                        display: none;
+                        cursor: pointer;
+                    }
+
+                    .inputs_box {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        .it {
+                            width: 130px;
+                            height: 40px;
+                            border: 1px solid gainsboro;
+                            border-radius: 4px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 0 10px;
+                            margin-top: 20px;
+
+                            h1 {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+
+                }
+
+                .colors {
+                    h3 {
+                        margin-top: 30px;
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: #5a5959;
+                        margin: 30px 0 20px;
+                    }
+
+                    .elem {
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+                        margin-top: 12px;
+                        cursor: pointer;
+
+                        .item {
+                            width: 25px;
+                            height: 25px;
+                            border-radius: 100%;
+                            cursor: pointer;
+                        }
+
+                        .b {
+                            background-color: black;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .or {
+                            background-color: orange;
+                            border: 1px solid wheat;
+                        }
+
+                        .bl {
+                            background-color: skyblue;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .gr {
+                            background-color: #64b260;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .r {
+                            background-color: red;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .g {
+                            background-color: gray;
+                            border: 1px solid wheat;
+
+                        }
+
+                        .wh {
+                            background-color: white;
+                            border: 1px solid wheat;
+                        }
+                    }
+                }
+
+                .clear_btns {
+                    text-align: center;
+                    padding: 30px;
+
+                    button {
+                        height: 40px;
+                        width: 100%;
+                        border-radius: 10px;
+                        background-color: white;
+                        border: 1px solid rgb(172, 172, 172);
+                        font-size: 15px;
+                        font-weight: 500;
+                        color: #1e2434;
+                    }
+                }
+            }
+
+            .aside_case {
+                margin-top: 40px;
+            }
+
+            .aside_box {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                row-gap: 20px;
+
+
+                .goods_main_box {
+                    width: 120px;
+                    height: 100%;
+                    border-radius: 12px;
+
+                    .poster_box {
+                        width: 100%;
+                        height: 170px;
+                        //  background-color: #efefef;
+                        padding: 20px;
+                        border-radius: 10px;
+                        border: 1px solid black;
+                    }
+                }
+                .credit {
+                    color: #000000;
+                    font-size: 11px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    width: 80%;
+                    text-align: center;
+                    border-radius: 3px;
+                    background-color: yellow;
+                    margin: 8px 0;
+                    display: block;
+                }
+            }
+
+
+        }
+    }
+}

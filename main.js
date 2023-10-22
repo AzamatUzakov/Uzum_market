@@ -20,7 +20,6 @@ let pc_box = []
 let tv_box = []
 let audio_box = []
 let kitchen_box = []
-
 getData('/goods')
     .then(res => {
         for (let item of res.data) {
