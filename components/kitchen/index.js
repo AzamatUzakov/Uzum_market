@@ -4,7 +4,9 @@ let all_catigories_btn = document.querySelector(".all")
 let main_href = document.querySelector('.main')
 let electriks_href = document.querySelector('.kitchen')
 let aside_case = document.querySelector('.aside_box')
+let cat_p = document.querySelectorAll('.cat')
 
+console.log(cat_p);
 
 function sort() {
     let sort_cont = document.querySelector('.sort_cont')
@@ -90,12 +92,20 @@ all_catigories_btn.onclick = () => {
      */
 }
 
+cat_p.forEach(btn => {
+    btn.onclick = () => {
+        cat_p.forEach(btn => btn.classList.remove('active_p'))
+        btn.classList.add('active_p')
+    }
+});
+
 
 main_href.onclick = () => {
     location.assign('/')
 }
 
 let kitchen_arr = []
+let gray_color_arr = []
 getData('/goods')
     .then(res => {
         for (let item of res.data) {
@@ -104,6 +114,7 @@ getData('/goods')
             }
         }
         for (let item of kitchen_arr) {
+            //console.log(item);
             let goods_main_box = document.createElement('div')
 
             let poster_box = document.createElement('div')
@@ -170,8 +181,11 @@ getData('/goods')
             price_flex_cont.append(price_flex_cont_p, shop_box)
             shop_box.append(shop_box_img)
 
+            if (item.colors=== "white") {
+                gray_color_arr.push(item)
 
-
+            }
+            console.log(gray_color_arr);
 
         }
     }
