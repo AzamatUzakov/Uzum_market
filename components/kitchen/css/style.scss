@@ -10,8 +10,7 @@
     margin: 0 auto;
 
     .active_p {
-        background-color: #dddddd;
-        padding: 2px 3px;
+        background-color: #eeeaea;
         border-radius: 4px;
         transition: .4s ease;
 
@@ -19,7 +18,7 @@
     }
     .aza{
         &:hover{
-            background-color: #dddddd;
+            background-color: #eeeaea;
             transition: .4s ease;
         }
         width: 135px;
@@ -60,7 +59,6 @@
 
     .spa_case {
         display: flex;
-        justify-content: space-between;
         gap: 60px;
 
         .saidbarg {
@@ -163,44 +161,42 @@
                         cursor: pointer;
                     }
 
+                    .act{
+                        border: 2px solid rgb(235, 20, 92);
+
+                    }
+
                     .b {
                         background-color: black;
-                        border: 1px solid wheat;
 
                     }
 
                     .or {
                         background-color: orange;
-                        border: 1px solid wheat;
                     }
 
                     .bl {
                         background-color: skyblue;
-                        border: 1px solid wheat;
 
                     }
 
                     .gr {
                         background-color: #64b260;
-                        border: 1px solid wheat;
 
                     }
 
                     .r {
                         background-color: red;
-                        border: 1px solid wheat;
 
                     }
 
                     .g {
                         background-color: gray;
-                        border: 1px solid wheat;
 
                     }
 
                     .wh {
-                        background-color: white;
-                        border: 1px solid wheat;
+                        background-color: wheat;
                     }
                 }
             }
@@ -218,6 +214,13 @@
                     font-size: 15px;
                     font-weight: 500;
                     color: #1e2434;
+transition: .5s ease;
+                    cursor: pointer;
+
+                    &:hover {
+                        transition: .4s ease;
+                        background-color: #eeeaea;
+                    }
                 }
             }
         }

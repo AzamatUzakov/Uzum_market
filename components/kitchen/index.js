@@ -5,8 +5,19 @@ let main_href = document.querySelector('.main')
 let electriks_href = document.querySelector('.kitchen')
 let aside_case = document.querySelector('.aside_box')
 let cat_p = document.querySelectorAll('.cat')
-
-console.log(cat_p);
+let elem_items = document.querySelectorAll('.elem')
+let itemBtns = document.querySelectorAll('.item')
+let white_btn = document.querySelector('.white')
+let black_btn = document.querySelector('.black')
+let orange_btn = document.querySelector('.orange')
+let blue_btn = document.querySelector('.blue')
+let green_btn = document.querySelector('.green')
+let red_btn = document.querySelector('.red')
+let gray_btn = document.querySelector('.gray')
+let to_main_p = document.querySelector('.to_main')
+let kit_p = document.querySelector('.kit')
+let tovar = document.querySelector('.tovar')
+console.log(cat_p[1]);
 
 function sort() {
     let sort_cont = document.querySelector('.sort_cont')
@@ -86,6 +97,14 @@ categories.forEach(btn => {
         btn.classList.add('active')
     }
 });
+
+itemBtns.forEach(btn => {
+    btn.onclick = () => {
+        itemBtns.forEach(btn => btn.classList.remove('act'))
+        btn.classList.add('act')
+    }
+});
+
 all_catigories_btn.onclick = () => {
     electriks_href.remove()
     /*     localStorage.setItem("all_catigor", location.assign('/components/technic/index.html'))
@@ -104,8 +123,15 @@ main_href.onclick = () => {
     location.assign('/')
 }
 
+to_main_p.onclick = () => {
+    location.assign('/')
+    console.log('click');
+}
+
 let kitchen_arr = []
+let white_color_arr = []
 let gray_color_arr = []
+
 getData('/goods')
     .then(res => {
         for (let item of res.data) {
@@ -113,81 +139,113 @@ getData('/goods')
                 kitchen_arr.push(item)
             }
         }
+
+
         for (let item of kitchen_arr) {
-            //console.log(item);
-            let goods_main_box = document.createElement('div')
+            console.log(item);
+            item.colors.forEach(el => {
+                if (el === "white") {
+                    white_color_arr.push(item)
+                }
+                else if (el === "#D0D0D1FF" || el === "#915927FF") {
+                    gray_color_arr.push(item)
+                }
 
-            let poster_box = document.createElement('div')
-            let heart_position = document.createElement('div')
-            let heart_position_img = document.createElement('img')
-            let poster_img_box = document.createElement('div')
-            let poster_img_box_img = document.createElement('img')
-            let title = document.createElement('div')
-            let title_p = document.createElement('p')
-            let grade = document.createElement('div')
-            let grade_p = document.createElement('p')
-            let grade_p_num = document.createElement('p')
-            let credit = document.createElement('div')
-            let promotion = document.createElement('div')
-            let price_flex_cont = document.createElement('div')
-            let price_flex_cont_p = document.createElement('p')
-            let shop_box = document.createElement('div')
-            let shop_box_img = document.createElement('img')
-
-            goods_main_box.classList.add("goods_main_box")
-            poster_box.classList.add("poster_box")
-            heart_position.classList.add("heart_position")
-            poster_img_box.classList.add("poster_img_box")
-            poster_img_box_img.classList.add("poster_img")
-            title.classList.add("title")
-            grade.classList.add("grade")
-            credit.classList.add("credit")
-            promotion.classList.add("promotion")
-            price_flex_cont.classList.add("price_flex_cont")
-            shop_box.classList.add("shop_box")
-
-            let date = new Date
-            let month = date.getMonth()
-            let price_replace = item.price.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, " ")
-
-            let loan_per_month = Math.round(item.price / month)/* .toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ')
-            loan_per_month */
-            title_p.innerHTML = item.title.slice(0, 70)
-            grade.innerHTML = '⭐️'
-            grade_p.innerHTML = item.rating
-            grade_p_num.innerHTML = `(${item.salePercentage} оценка)`
-            promotion.innerHTML = "32000 сум"
-            price_flex_cont_p.innerHTML = price_replace + " 00"
-            credit.innerHTML = loan_per_month + " 00 сум/мес"
-
-
-            heart_position_img.src = "/public/love.png"
-            shop_box_img.src = "/public/shopping-cart 1.png"
-            poster_img_box_img.src = item.media[0]
-
-
-
-
-
-
-
-            aside_case.append(goods_main_box)
-            goods_main_box.append(poster_box, title, grade, credit, promotion, price_flex_cont)
-            poster_box.append(heart_position, poster_img_box)
-            heart_position.append(heart_position_img)
-            poster_img_box.append(poster_img_box_img)
-            title.append(title_p)
-            grade.append(grade_p, grade_p_num)
-            price_flex_cont.append(price_flex_cont_p, shop_box)
-            shop_box.append(shop_box_img)
-
-            if (item.colors=== "white") {
-                gray_color_arr.push(item)
-
-            }
-            console.log(gray_color_arr);
-
+            });
         }
+
+        reload(kitchen_arr)
+
+        white_btn.onclick = () => {
+            reload(white_color_arr)
+        }
+        gray_btn.onclick = () => {
+            reload(gray_color_arr)
+        }
+      
+        kit_p.onclick = () => {
+            reload(kitchen_arr)
+        }
+        tovar.onclick = () => {
+            reload(kitchen_arr)
+        }
+      
+
+
     }
     )
+
+function reload(arr) {
+    aside_case.innerHTML = ""
+
+    for (let item of arr) {
+        let goods_main_box = document.createElement('div')
+
+        let poster_box = document.createElement('div')
+        let heart_position = document.createElement('div')
+        let heart_position_img = document.createElement('img')
+        let poster_img_box = document.createElement('div')
+        let poster_img_box_img = document.createElement('img')
+        let title = document.createElement('div')
+        let title_p = document.createElement('p')
+        let grade = document.createElement('div')
+        let grade_p = document.createElement('p')
+        let grade_p_num = document.createElement('p')
+        let credit = document.createElement('div')
+        let promotion = document.createElement('div')
+        let price_flex_cont = document.createElement('div')
+        let price_flex_cont_p = document.createElement('p')
+        let shop_box = document.createElement('div')
+        let shop_box_img = document.createElement('img')
+
+        goods_main_box.classList.add("goods_main_box")
+        poster_box.classList.add("poster_box")
+        heart_position.classList.add("heart_position")
+        poster_img_box.classList.add("poster_img_box")
+        poster_img_box_img.classList.add("poster_img")
+        title.classList.add("title")
+        grade.classList.add("grade")
+        credit.classList.add("credit")
+        promotion.classList.add("promotion")
+        price_flex_cont.classList.add("price_flex_cont")
+        shop_box.classList.add("shop_box")
+
+        let date = new Date
+        let month = date.getMonth()
+        let price_replace = item.price.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, " ")
+
+        let loan_per_month = Math.round(item.price / month)/* .toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ')
+        loan_per_month */
+        title_p.innerHTML = item.title.slice(0, 70)
+        grade.innerHTML = '⭐️'
+        grade_p.innerHTML = item.rating
+        grade_p_num.innerHTML = `(${item.salePercentage} оценка)`
+        promotion.innerHTML = "32000 сум"
+        price_flex_cont_p.innerHTML = price_replace + " 00"
+        credit.innerHTML = loan_per_month + " 00 сум/мес"
+
+
+        heart_position_img.src = "/public/love.png"
+        shop_box_img.src = "/public/shopping-cart 1.png"
+        poster_img_box_img.src = item.media[0]
+
+
+
+
+
+
+
+        aside_case.append(goods_main_box)
+        goods_main_box.append(poster_box, title, grade, credit, promotion, price_flex_cont)
+        poster_box.append(heart_position, poster_img_box)
+        heart_position.append(heart_position_img)
+        poster_img_box.append(poster_img_box_img)
+        title.append(title_p)
+        grade.append(grade_p, grade_p_num)
+        price_flex_cont.append(price_flex_cont_p, shop_box)
+        shop_box.append(shop_box_img)
+
+
+    }
+}
 
