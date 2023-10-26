@@ -17,6 +17,7 @@ let gray_btn = document.querySelector('.gray')
 let to_main_p = document.querySelector('.to_main')
 let kit_p = document.querySelector('.kit')
 let tovar = document.querySelector('.tovar')
+let bird_img = document.querySelector('.bird_img')
 console.log(cat_p[1]);
 
 function sort() {
@@ -131,6 +132,8 @@ to_main_p.onclick = () => {
 let kitchen_arr = []
 let white_color_arr = []
 let gray_color_arr = []
+let max_prise = []
+let min_price = []
 
 getData('/goods')
     .then(res => {
@@ -138,11 +141,15 @@ getData('/goods')
             if (item.type === "kitchen") {
                 kitchen_arr.push(item)
             }
+            /*    
+                }) */
         }
 
 
+
+
         for (let item of kitchen_arr) {
-            console.log(item);
+            // console.log(item);
             item.colors.forEach(el => {
                 if (el === "white") {
                     white_color_arr.push(item)
@@ -151,8 +158,13 @@ getData('/goods')
                     gray_color_arr.push(item)
                 }
 
+
             });
+            max_prise.push(item)
+            min_price.push(item)
         }
+
+
 
         reload(kitchen_arr)
 
@@ -162,15 +174,20 @@ getData('/goods')
         gray_btn.onclick = () => {
             reload(gray_color_arr)
         }
-      
+
         kit_p.onclick = () => {
             reload(kitchen_arr)
         }
         tovar.onclick = () => {
             reload(kitchen_arr)
         }
-      
 
+
+        max_prise.sort((a, b) => (+a.price) - (+b.price));
+        min_price.sort((a, b) => (-a.price) - (-b.price));
+
+        console.log(max_prise);
+console.log(min_price);
 
     }
     )
@@ -248,4 +265,6 @@ function reload(arr) {
 
     }
 }
+
+
 

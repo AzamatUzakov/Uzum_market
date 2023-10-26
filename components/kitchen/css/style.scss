@@ -16,11 +16,13 @@
 
 
     }
-    .aza{
-        &:hover{
+
+    .aza {
+        &:hover {
             background-color: #eeeaea;
             transition: .4s ease;
         }
+
         width: 135px;
         padding: 2px 3px;
         border-radius: 4px;
@@ -161,7 +163,7 @@
                         cursor: pointer;
                     }
 
-                    .act{
+                    .act {
                         border: 2px solid rgb(235, 20, 92);
 
                     }
@@ -214,7 +216,7 @@
                     font-size: 15px;
                     font-weight: 500;
                     color: #1e2434;
-transition: .5s ease;
+                    transition: .5s ease;
                     cursor: pointer;
 
                     &:hover {
@@ -227,6 +229,22 @@ transition: .5s ease;
 
         .aside_case {
             margin-top: 40px;
+
+            .bird_img {
+                width: 160px;
+                height: 120px;
+                position: absolute;
+                text-align: center;
+                font-size: 20px;
+               top: 50%;
+                transform: translateX(-50%);
+                display: none;
+                font-weight: 500;
+
+                img {
+                    width: 100%;
+                }
+            }
         }
 
         .aside_box {
