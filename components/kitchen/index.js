@@ -36,7 +36,7 @@ cheap_opt.text = "aza";
 moreExpensive_opt.value = "moreExspensive";
 moreExpensive_opt.text = "Подароже";
 
-selected.append(cheap_opt,moreExpensive_opt)
+selected.append(cheap_opt, moreExpensive_opt)
 
 
 categories.forEach(btn => {
@@ -96,6 +96,7 @@ getData('/goods')
 
 
 
+
         for (let item of kitchen_arr) {
             // console.log(item);
             item.colors.forEach(el => {
@@ -108,6 +109,9 @@ getData('/goods')
 
 
             });
+
+
+
             max_prise.push(item)
             min_price.push(item)
             max_rating.push(item)
@@ -135,12 +139,13 @@ getData('/goods')
             reload(all_products)
             electriks_href.style.display = "none"
         }
+
         // localStorage.setItem("aza", all_products)
 
 
 
-        max_prise.sort((a, b) => (+a.price) - (+b.price));
-        min_price.sort((a, b) => (-a.price) - (-b.price));
+        max_prise.sort((a, b) => (-a.price) - (-b.price));
+        min_price.sort((a, b) => (+a.price) - (+b.price));
         max_rating.sort((a, b) => (-a.rating) - (-b.rating));
 
         /*      console.log(max_prise);
@@ -148,10 +153,6 @@ getData('/goods')
         console.log(max_rating);
 
 
-        if (selected === moreExpensive_opt.value) {
-            reload(max_prise)
-            window.onload()
-        }
     }
     )
 
@@ -169,7 +170,7 @@ function sort() {
     let cheap_opt = document.createElement('option')
     let moreExpensive_opt = document.createElement('option')
     let highRating_opt = document.createElement('option')
-    let orders_opt = document.createElement('option')
+    let popular_opt = document.createElement('option')
 
     let filter_box = document.createElement('div')
     let filter_img = document.createElement('img')
@@ -200,6 +201,11 @@ function sort() {
     selected.id = "sort";
     selected.name = "sort";
 
+    
+    
+    popular_opt.value = "popular";
+    popular_opt.text = "Популярные"
+
     cheap_opt.value = "chaper";
     cheap_opt.text = "Подешевле";
 
@@ -213,15 +219,23 @@ function sort() {
     sort_cont.append(title_sort_cont, hr)
     title_sort_cont.append(title_sort_cont_h1, sort_box)
     sort_box.append(sort_box_p, selected, filter_box)
-    selected.append(cheap_opt, moreExpensive_opt, highRating_opt)
+    selected.append(popular_opt,cheap_opt, moreExpensive_opt, highRating_opt)
     filter_box.append(filter_img, filter_p)
 
 
-    if (selected.value === 'Подароже') {
-        reload(max_prise)
-    } else {
-        console.log('hueta');
+    selected.onchange = () => {
+       if (selected.value ===popular_opt.value) {
+        reload(kitchen_arr)
+       }
+        else if (selected.value === moreExpensive_opt.value) {
+            reload(max_prise)
+        } else if (selected.value === cheap_opt.value) {
+            reload(min_price)
+        }else if (selected.value === highRating_opt.value) {
+            reload(max_rating)
+        }
     }
+
 
     console.log(selected.value === "chaper");
 }
