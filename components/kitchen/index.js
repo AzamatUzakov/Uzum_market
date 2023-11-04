@@ -124,18 +124,16 @@ getData('/goods')
             reload(kitchen_arr)
         }
         all_catigories_btn.onclick = () => {
-            reload(all_products)
-            electriks_href.style.display = "none"
-            
-            localStorage.setItem("aza", JSON.stringify(all_products))
-
+           location.assign('/')
         }
 
-/* console.log(location.assign);
-if (location.origin === all_catigories_btn) {
-    reload(all_products)
-} */
-history.pushState('all_products', null, );
+        /* console.log(location.assign);
+        if (location.origin === all_catigories_btn) {
+            reload(all_products)
+        } */
+        history.pushState(null, null, '/all-products');
+    
+    
         max_prise.sort((a, b) => (-a.price) - (-b.price));
         min_price.sort((a, b) => (+a.price) - (+b.price));
         max_rating.sort((a, b) => (-a.rating) - (-b.rating));
@@ -232,6 +230,8 @@ function sort() {
     console.log(selected.value === "chaper");
 }
 sort()
+
+
 
 function reload(arr) {
     aside_case.innerHTML = ""
