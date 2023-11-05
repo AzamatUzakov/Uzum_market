@@ -1,8 +1,7 @@
-
+import { getData } from '/modules/http'
 let body_2 = document.querySelector('.body_2')
 let body_3 = document.querySelector('.body_3')
 let body_4 = document.querySelector('.hot_hrefs')
-
 
 
 
@@ -20,6 +19,7 @@ function headers_1() {
     let cotalog_inp_flex_box = document.createElement('div')
     let catalog_cont = document.createElement('div')
     let search_box = document.createElement('div')
+    let search_form = document.createElement('form')
     let search_inp = document.createElement('input')
     let search_icons = document.createElement('div')
     let search_icons_img = document.createElement('img')
@@ -45,6 +45,7 @@ function headers_1() {
     catalog_cont.classList.add('catalog_cont')
     search_box.classList.add('search_box')
     search_inp.classList.add('search_inp')
+    search_form.classList.add('search_form')
     search_icons.classList.add('search_icons')
     enter_favorite_bascet_cont.classList.add('enter_favorite_bascet_cont')
 
@@ -81,7 +82,8 @@ function headers_1() {
     header_flex_cont.append(uzum_icon, cotalog_inp_flex_box, enter_favorite_bascet_cont)
     uzum_icon.append(uzum_icon_img)
     cotalog_inp_flex_box.append(catalog_cont, search_box)
-    search_box.append(search_inp, search_icons)
+    search_box.append(search_form, search_icons)
+    search_form.append(search_inp)
     search_icons.append(search_icons_img)
     enter_favorite_bascet_cont.append(enter_box, favorite_box, bascet_box)
     enter_box.append(enter_box_img, enter_box_p)
@@ -91,6 +93,29 @@ function headers_1() {
     uzum_icon_img.onclick = () => {
         location.assign('/')
     }
+
+
+
+
+    getData('/goods')
+        .then(res => {
+
+            for(let item of res.data){
+            search_inp.oninput = () => {
+                let query = search_inp.value.toLowerCase().trim()
+
+                let filtered = item.filter(i => {
+                    let titles = i.title.toLowerCase()
+                    if (titles.includes(query)) {
+                        return i
+                    }
+                })
+
+                headers_1(filtered)
+            }
+        }
+        })
+
 }
 headers_1()
 

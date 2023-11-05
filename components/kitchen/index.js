@@ -124,16 +124,15 @@ getData('/goods')
             reload(kitchen_arr)
         }
         all_catigories_btn.onclick = () => {
-           location.assign('/')
+            location.assign('/')
         }
 
         /* console.log(location.assign);
         if (location.origin === all_catigories_btn) {
             reload(all_products)
         } */
-        history.pushState(null, null, '/all-products');
-    
-    
+
+
         max_prise.sort((a, b) => (-a.price) - (-b.price));
         min_price.sort((a, b) => (+a.price) - (+b.price));
         max_rating.sort((a, b) => (-a.rating) - (-b.rating));
@@ -216,13 +215,22 @@ function sort() {
     selected.onchange = () => {
         if (selected.value === popular_opt.value) {
             reload(kitchen_arr)
+            history.pushState(null, null, `/${popular_opt.value}`);
+
         }
         else if (selected.value === moreExpensive_opt.value) {
             reload(max_prise)
+
+            history.pushState(null, null, '/components/kitchen/index.html' + `/?${moreExpensive_opt.value}`);
+
         } else if (selected.value === cheap_opt.value) {
             reload(min_price)
+            history.pushState(null, null, `/${cheap_opt.value}`);
+
         } else if (selected.value === highRating_opt.value) {
             reload(max_rating)
+            history.pushState(null, null, `/${highRating_opt.value}`);
+
         }
     }
 
