@@ -33,7 +33,7 @@
         }
 
 
-
+    }
         .spa_case {
             display: flex;
             justify-content: space-between;
@@ -230,7 +230,7 @@
 
         }
     }
-}
+
 
 
 
@@ -268,7 +268,7 @@
             }
         }
 
-
+    }
 
         .spa_case {
             display: flex;
@@ -468,7 +468,7 @@
 
         }
     }
-}
+
 
 
 
@@ -506,7 +506,7 @@
                 transition: .4s ease;
             }
         }
-
+    }
 
 
         .spa_case {
@@ -704,7 +704,6 @@
 
         }
     }
-}
 
 @media(max-width: 700px) {
 
@@ -741,7 +740,7 @@
         }
 
 
-
+    }
         .spa_case {
             display: flex;
             gap: 40px;
@@ -937,7 +936,7 @@
 
         }
     }
-}
+
 
 
 
@@ -974,7 +973,7 @@
                 color: black;
                 transition: .4s ease;
             }
-        }
+        }}
 
 
 
@@ -1173,7 +1172,7 @@
 
         }
     }
-}
+
 
 
 
@@ -1211,7 +1210,7 @@
             }
         }
 
-
+    }
 
         .spa_case {
             display: flex;
@@ -1408,8 +1407,6 @@
 
         }
     }
-}
-
 
 
 
@@ -1447,6 +1444,7 @@
                 transition: .4s ease;
             }
         }
+    }
 
 
 
@@ -1657,4 +1655,3 @@
 
         }
     }
-}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +11,15 @@
     <link rel="stylesheet" href="/components/header/css/media.scss">
     <link rel="stylesheet" href="/components/sort/css/style.scss">
     <link rel="stylesheet" href="/components/sort/css/media.scss">
+    <link rel="stylesheet" href="/components/kitchen/css/style.scss">
+    <link rel="stylesheet" href="/components/kitchen/css/media.scss">
+    <link rel="stylesheet" href="./css/wraper.css">
+    <link rel="stylesheet" href="/style.scss">
+    <link rel="stylesheet" href="/main_media.scss">
+
 
 </head>
+
 <body>
 
 
@@ -29,12 +37,112 @@
 
         <div class="sort_cont"></div>
 
+        <div class="spa_case">
+            <div class="saidbarg">
+                <h1>Категории</h1>
+                <div class="titels">
+                    <div class="all_catigories_title">
+                        <img src="/public/arrow-point-to-right.png" alt="">
+                        <div class="aza">
+                            <p class="to_main cat "> Все катигории</p>
+                        </div>
+                    </div>
+
+                    <div class="kitchen_catigories_title ">
+                        <div class="aza kit">
+                            <p class="cat active_p">Кухня</p>
+                        </div>
+                    </div>
+
+                    <div class="kitchen_goods_catigories_title">
+                        <div class="aza tovar">
+                            <p class="cat">Товары для кухни</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="price_box">
+                    <h2>Цена</h2>
+                    <div class="clear_btn">Очистить</div>
+                    <div class="inputs_box">
+
+                        <div class="block_one it">
+                            <h1>от</h1>
+                            <p id="range1">0</p>
+                            <h1>cум</h1>
+                        </div>
+
+                        <div class="block_two it">
+                            <h1>до</h1>
+                            <p id="range2">1000</p>
+                            <h1>сум</h1>
+                        </div>
+
+                    </div>
+
+                    <div class="container">
+                        <div class="slider-track"></div>
+                        <input type="range" min="0" max="1000" value="0" id="slider-1" oninput="slideOne()">
+                        <input type="range" min="0" max="1000" value="1000" id="slider-2" oninput="slideTwo()">
+                    </div>
+                </div>
+
+                <div class="colors">
+                    <h3>Цвет</h3>
+                    <div class="black elem">
+                        <div class="item b"></div>
+                        <p>Черный</p>
+                    </div>
+
+                    <div class="orange elem">
+                        <div class="item or"></div>
+                        <p>Оранжевый</p>
+                    </div>
+
+                    <div class="blue elem">
+                        <div class="item bl"></div>
+                        <p>Синий</p>
+                    </div>
+
+                    <div class="green elem">
+                        <div class="item gr"></div>
+                        <p>Зеленый</p>
+                    </div>
+
+                    <div class="red elem">
+                        <div class="item r"></div>
+                        <p>Крассный</p>
+                    </div>
+
+                    <div class="gray elem">
+                        <div class="item g"></div>
+                        <p>Серый</p>
+                    </div>
+
+                    <div class="white elem">
+                        <div class="item wh"></div>
+                        <p>Белый</p>
+                    </div>
+
+                </div>
+                <div class="clear_btns">
+                    <button>Очистить всё</button>
+                </div>
+            </div>
+            <div class="aside_case">
+                <div class="aside_box"></div>
+                <div class="all_products_box"></div>
+            </div>
+
+        </div>
 
 
     </div>
 
-
+    <script src="./wraper.js"></script>
     <script type="module" src="/components/header/index.js"></script>
     <script type="module" src="./index.js"></script>
 </body>
+
 </html>

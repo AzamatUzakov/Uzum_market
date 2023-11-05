@@ -1,4 +1,3 @@
-import { getData } from '/modules/http'
 let body_2 = document.querySelector('.body_2')
 let body_3 = document.querySelector('.body_3')
 let body_4 = document.querySelector('.hot_hrefs')
@@ -93,29 +92,6 @@ function headers_1() {
     uzum_icon_img.onclick = () => {
         location.assign('/')
     }
-
-
-
-
-    getData('/goods')
-        .then(res => {
-
-            for(let item of res.data){
-            search_inp.oninput = () => {
-                let query = search_inp.value.toLowerCase().trim()
-
-                let filtered = item.filter(i => {
-                    let titles = i.title.toLowerCase()
-                    if (titles.includes(query)) {
-                        return i
-                    }
-                })
-
-                headers_1(filtered)
-            }
-        }
-        })
-
 }
 headers_1()
 
