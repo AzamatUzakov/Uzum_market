@@ -1,4 +1,4 @@
-
+/* 
 
 
  function sort() {
@@ -67,4 +67,5 @@
     selected.append(cheap_opt, moreExpensive_opt, highRating_opt, orders_opt, added_opt)
     filter_box.append(filter_img, filter_p)
 }
-sort()
+sort() */
+

@@ -218,7 +218,7 @@ function hot_hrefs() {
     accessories.innerHTML = "ТВ"
     beauty.innerHTML = "Кухня"
     health.innerHTML = "none"
-    household_products.innerHTML = "Товары для дома"
+    household_products.innerHTML = "Мебель"
     more_a.innerHTML = "Ещё"
 
 

@@ -74,6 +74,7 @@ let all_products = []
 let kitchen_arr = []
 let white_color_arr = []
 let gray_color_arr = []
+let black_color_arr =[]
 let max_prise = []
 let min_price = []
 let max_rating = []
@@ -81,9 +82,10 @@ let max_rating = []
 getData('/goods')
     .then(res => {
         for (let item of res.data) {
-            console.log(item);
-            if (item.type === "kitchen") {
+          //  console.log(item);
+            if (item.type === "furniture") {
                 kitchen_arr.push(item)
+                /* console.log(item); */
             }
             all_products.push(item)
         }
@@ -99,6 +101,10 @@ getData('/goods')
                 }
                 else if (el === "#D0D0D1FF" || el === "#915927FF") {
                     gray_color_arr.push(item)
+                }
+                
+                else if (el === "black") {
+                    black_color_arr.push(item)
                 }
 
 
@@ -116,11 +122,8 @@ getData('/goods')
 
         reload(kitchen_arr)
 
-        white_btn.onclick = () => {
-            reload(white_color_arr)
-        }
-        gray_btn.onclick = () => {
-            reload(gray_color_arr)
+        black_color_arr.onclick = () => {
+            reload(black_color_arr)
         }
 
         kit_p.onclick = () => {

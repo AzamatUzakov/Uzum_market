@@ -19,9 +19,12 @@ let gray_btn = document.querySelector('.gray')
 let to_main_p = document.querySelector('.to_main')
 let kit_p = document.querySelector('.kit')
 let tovar = document.querySelector('.tovar')
+let tv = document.querySelector('.tv')
+let pc = document.querySelector('.pc')
+let clear_btns = document.querySelector('.clear_btns')
 let bird_img = document.querySelector('.bird_img')
 
-console.log(all_catigories_btn);
+console.log(tv, pc);
 
 
 
@@ -55,7 +58,7 @@ all_catigories_btn.onclick = () => {
 }
 
 main_href.onclick = () => {
-location.assign('/')
+    location.assign('/')
 }
 
 
@@ -68,16 +71,25 @@ to_main_p.onclick = () => {
 
 let all_products = []
 let kitchen_arr = []
+let black_color_arr = []
+let orange_color_arr = []
+let blue_color_arr = []
 let white_color_arr = []
 let gray_color_arr = []
 let max_prise = []
 let min_price = []
 let max_rating = []
+let technic_rel_arr = []
+let pc_rel_arr = []
+let tv_rel_arr = []
+
+
 
 getData('/goods')
     .then(res => {
+        // console.log(res.data);
         for (let item of res.data) {
-            if (item.type === "kitchen") {
+            if (item.type === "kitchen" || item.type === "PC" || item.type === "audio" || item.type === "TV") {
                 kitchen_arr.push(item)
             }
             all_products.push(item)
@@ -95,9 +107,26 @@ getData('/goods')
                 else if (el === "#D0D0D1FF" || el === "#915927FF") {
                     gray_color_arr.push(item)
                 }
+                else if (el === "black") {
+                    black_color_arr.push(item)
+                }
+                else if (el === "blue") {
+                    blue_color_arr.push(item)
+                }
+                else if (el === "orange") {
+                    orange_color_arr.push(item)
+                }
 
 
             });
+
+            if (item.type === 'PC') {
+                pc_rel_arr.push(item)
+
+            } else if (item.type === "TV") {
+                tv_rel_arr.push(item)
+            }
+
 
 
 
@@ -108,7 +137,6 @@ getData('/goods')
         }
 
 
-
         reload(kitchen_arr)
 
         white_btn.onclick = () => {
@@ -117,16 +145,26 @@ getData('/goods')
         gray_btn.onclick = () => {
             reload(gray_color_arr)
         }
+        black_btn.onclick = () => {
+            reload(black_color_arr)
+        }
+        blue_btn.onclick = () => {
+            reload(blue_color_arr)
+        }
+        orange_btn.onclick = () => {
+            reload(orange_color_arr)
+        }
 
         kit_p.onclick = () => {
             reload(kitchen_arr)
         }
-        tovar.onclick = () => {
+    /*     tovar.onclick = () => {
             reload(kitchen_arr)
-        }
+        } */
         all_catigories_btn.onclick = () => {
             location.assign('/')
         }
+
 
         /* console.log(location.assign);
         if (location.origin === all_catigories_btn) {
@@ -145,8 +183,19 @@ getData('/goods')
 
     }
     )
+pc.onclick = () => {
+    reload(pc_rel_arr)
+}
 
-/* 
+tv.onclick = () => {
+    reload(tv_rel_arr)
+    console.log("click");
+}
+clear_btns.onclick = () => {
+    location.reload()
+}
+
+
 
 function sort() {
     let sort_cont = document.querySelector('.sort_cont')
@@ -238,7 +287,7 @@ function sort() {
 
     console.log(selected.value === "chaper");
 }
-sort() */
+sort()
 
 
 
