@@ -19,6 +19,7 @@ let gray_btn = document.querySelector('.gray')
 let to_main_p = document.querySelector('.to_main')
 let kit_p = document.querySelector('.kit')
 let tovar = document.querySelector('.tovar')
+let clear_btns = document.querySelector('.clear_btns')
 let bird_img = document.querySelector('.bird_img')
 
 
@@ -129,9 +130,9 @@ getData('/goods')
         kit_p.onclick = () => {
             reload(kitchen_arr)
         }
-        tovar.onclick = () => {
+     /*    tovar.onclick = () => {
             reload(kitchen_arr)
-        }
+        } */
         all_catigories_btn.onclick = () => {
             location.assign('/')
         }
@@ -153,7 +154,10 @@ getData('/goods')
 
     }
     )
-
+    clear_btns.onclick = () => {
+        location.reload()
+    }
+    
 
 
 function sort() {
@@ -185,7 +189,7 @@ function sort() {
     filter_p.classList.add('fill')
     hr.classList.add('hr')
 
-    title_sort_cont_h1.innerHTML = "Кухня"
+    title_sort_cont_h1.innerHTML = "Мебель"
     sort_box_p.innerHTML = "Сортировка"
     cheap_opt.innerHTML = "Подешевле"
     moreExpensive_opt.innerHTML = "Подароже"
