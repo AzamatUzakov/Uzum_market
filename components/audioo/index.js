@@ -20,6 +20,7 @@ let to_main_p = document.querySelector('.to_main')
 let kit_p = document.querySelector('.kit')
 let tovar = document.querySelector('.tovar')
 let bird_img = document.querySelector('.bird_img')
+let clear_btns = document.querySelector('.clear_btns')
 
 
 
@@ -71,12 +72,16 @@ let all_products = []
 let kitchen_arr = []
 let white_color_arr = []
 let gray_color_arr = []
+let blue_color_arr = []
+let black_color_arr = []
+let orange_color_arr = []
 let max_prise = []
 let min_price = []
 let max_rating = []
 
 getData('/goods')
     .then(res => {
+
         for (let item of res.data) {
             if (item.type === "audio") {
                 kitchen_arr.push(item)
@@ -93,15 +98,24 @@ getData('/goods')
                 if (el === "white") {
                     white_color_arr.push(item)
                 }
-                else if (el === "#D0D0D1FF" || el === "#915927FF") {
+                else if (el === "grey") {
                     gray_color_arr.push(item)
                 }
+                else if (el === "blue") {
+                    blue_color_arr.push(item)
+                } else if (el === "black") {
+                    black_color_arr.push(item)
+                }
+                else if (el === "orange") {
+                    orange_color_arr.push(item)
+                }
+
 
 
             });
 
 
-
+            console.log(item);
             max_prise.push(item)
             min_price.push(item)
             max_rating.push(item)
@@ -117,6 +131,19 @@ getData('/goods')
         }
         gray_btn.onclick = () => {
             reload(gray_color_arr)
+        }
+        console.log(gray_color_arr);
+
+
+        black_btn.onclick = () => {
+            reload(black_color_arr)
+        }
+        blue_btn.onclick = () => {
+            reload(blue_color_arr)
+        }
+
+        orange_btn.onclick = () => {
+            reload(orange_color_arr)
         }
 
         kit_p.onclick = () => {
@@ -148,7 +175,9 @@ getData('/goods')
     )
 
 
-
+    clear_btns.onclick = () => {
+        location.reload()
+    }
 function sort() {
     let sort_cont = document.querySelector('.sort_cont')
 

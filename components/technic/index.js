@@ -21,6 +21,7 @@ let to_main_p = document.querySelector('.to_main')
 let kit_p = document.querySelector('.kit')
 let tovar = document.querySelector('.tovar')
 let bird_img = document.querySelector('.bird_img')
+let clear_btns = document.querySelector('.clear_btns')
 
 
 
@@ -148,6 +149,10 @@ getData('/goods')
     }
     )
 
+    clear_btns.onclick = () => {
+        location.reload()
+    }
+    
 
 function sort() {
     let sort_cont = document.querySelector('.sort_cont')
