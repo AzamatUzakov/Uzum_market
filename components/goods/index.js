@@ -9,9 +9,9 @@ let goods_flex_box = document.createElement('div')
 
 export function createBlock(arr, place, titles) {
     let limit = 5
-      let chekArrLength = arr.length - limit > 5 ? "Покозать ещё 5" : `Покозать ещё ${arr.length - limit}`
+    let chekArrLength = arr.length - limit > 5 ? "Покозать ещё 5" : `Покозать ещё ${arr.length - limit}`
 
-   
+
     let main_contener = document.createElement('div')
     let title = document.createElement('h1')
     let box = document.createElement('div')
@@ -111,7 +111,7 @@ export function goods_products(arr, box) {
 
 
 
-
+       // poster_img_box_img.href = "#"
 
 
         box.append(goods_main_box)
@@ -125,6 +125,10 @@ export function goods_products(arr, box) {
         shop_box.append(shop_box_img)
 
 
+        poster_img_box_img.onclick = () => {
+            poster_img_box_img.href = "/components/id/index.html?id=" + item.id
+            console.log("clicc");
+        }
 
     }
 }
