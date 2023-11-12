@@ -65,7 +65,7 @@ export function goods_products(arr, box) {
         let poster_img_box = document.createElement('div')
         let poster_img_box_img = document.createElement('img')
         let title = document.createElement('div')
-        let title_p = document.createElement('p')
+        let title_p = document.createElement('a')
         let grade = document.createElement('div')
         let grade_p = document.createElement('p')
         let grade_p_num = document.createElement('p')
@@ -83,6 +83,7 @@ export function goods_products(arr, box) {
         poster_img_box.classList.add("poster_img_box")
         poster_img_box_img.classList.add("poster_img")
         title.classList.add("title")
+        title_p.classList.add('title')
         grade.classList.add("grade")
         credit.classList.add("credit")
         promotion.classList.add("promotion")
@@ -95,6 +96,8 @@ export function goods_products(arr, box) {
 
         let loan_per_month = Math.round(item.price / month)/* .toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ')
         loan_per_month */
+        title_p.href = "#"
+
         title_p.innerHTML = item.title.slice(0, 70)
         grade.innerHTML = '⭐️'
         grade_p.innerHTML = item.rating
@@ -111,7 +114,7 @@ export function goods_products(arr, box) {
 
 
 
-       // poster_img_box_img.href = "#"
+        // poster_img_box_img.href = "#"
 
 
         box.append(goods_main_box)
@@ -124,10 +127,10 @@ export function goods_products(arr, box) {
         price_flex_cont.append(price_flex_cont_p, shop_box)
         shop_box.append(shop_box_img)
 
+        title_p.onclick = () => {
+            title_p.href = "/components/id/index.html?id=" + item.id
+            localStorage.setItem('goods_id', item.id)
 
-        poster_img_box_img.onclick = () => {
-            poster_img_box_img.href = "/components/id/index.html?id=" + item.id
-            console.log("clicc");
         }
 
     }
