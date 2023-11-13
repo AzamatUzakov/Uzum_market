@@ -42,9 +42,9 @@
             }
 
             .main_img_box {
-                width: 300px;
+                width: 320px;
                 background-color: gainsboro;
-                height: 400px;
+                height: 380px;
                 border: 2px solid gainsboro;
                 border-radius: 5px;
                 margin-top: 10px;
@@ -54,7 +54,8 @@
                     height: 100%;
                     overflow-y: scroll;
                     display: flex;
-cursor: pointer;
+                    cursor: pointer;
+
                     &::-webkit-scrollbar {
                         display: none;
                     }
@@ -123,11 +124,23 @@ cursor: pointer;
                 background: #7000FF;
                 color: white;
             }
-            .favorites{
+
+            .favorites {
                 border-color: #7000FF;
-                color:  #7000FF;
+                color: #7000FF;
                 background-color: white;
             }
         }
     }
+
+    .description_two {
+        h3 {
+            font-size: 23px;
+        }
+
+        margin: 0 auto;
+        width:80%;
+        margin-top: 50px;
+    }
+
 }

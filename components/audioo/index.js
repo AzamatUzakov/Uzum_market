@@ -342,6 +342,12 @@ function reload(arr) {
         price_flex_cont.append(price_flex_cont_p, shop_box)
         shop_box.append(shop_box_img)
 
+        poster_img_box_img.onclick = () => {
+            location.href = "/components/id/index.html?id=" + item.id
+           localStorage.setItem('goods_id', JSON.stringify(item))
+          //  JSON.parse(localStorage.getItem("goods_id"))
+
+        }
 
     }
 }
