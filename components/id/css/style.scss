@@ -141,6 +141,34 @@
         margin: 0 auto;
         width:80%;
         margin-top: 50px;
+        margin-bottom: 30px;
     }
 
+    .ss {
+        overflow-y: scroll;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 20px;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+
+    }
+
+    .goods_main_box {
+        width: 220px;
+        height: 100%;
+        border-radius: 12px;
+
+        .poster_box {
+            width: 220px;
+            height: 300px;
+            //  background-color: #efefef;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid black;
+        }
+    }
+
+    
 }
